@@ -1,0 +1,106 @@
+@import url('https://fonts.google.com/specimen/Red+Hat+Display');
+
+body{
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    font-family: 'Red Hat Display', sans-serif;
+    text-align: center;
+    background-color: hsl(225, 100%, 94%);
+}
+h1{
+    font-size: 25px;
+    font-weight: 700;
+}
+h2{
+    font-size: 16px;
+    color: lightslategray;
+    font-weight: 500;
+    margin: 0 20% 0 20%;
+}
+h3{
+    font-size: 16px;
+}
+h5{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+    overflow: hidden;
+}
+p{
+    font-size: 16px;
+    color: lightslategray;  
+    margin: 10px 0;
+    text-align: left;
+}
+h6{
+    font-size: 16px;
+    color:hsl(245, 75%, 52%);
+    text-decoration: underline;
+    float: right;
+    margin: 0 10px;
+}
+h6:hover{
+    color: hsl(224, 23%, 55%);
+}
+#container {
+    width: 500px;
+    height: fit-content;
+    position: relative;
+    margin: 5% auto 0 auto;
+    background-color: white;
+    z-index: 10000;
+    box-shadow:5px 5px 60px hsl(223, 47%, 23%);
+    border-radius: 15px;
+    padding-bottom: 10px;
+}
+#illustration-hero {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+#annualPlan {
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 15px;
+    margin: 5% 15% 5% 15%;
+    height: 50px;
+    padding: 20px;
+}
+#annualPlan-Left {
+    width: 50%;
+    float: left;
+    margin: auto;
+
+}
+#annualPlan-Left img {
+    float: left;
+    margin-right: 10px;
+}
+#annualPlan-Right {
+    width: 50%;
+    overflow: hidden;
+    padding: 15px 0;
+}
+
+#proceedPayment {
+    border-radius: 15px;
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    margin: 5% 15% 5% 15%;
+    padding: 15px;
+    box-shadow: 0px 8px 20px hsl(223deg 47% 20%);
+}
+#proceedPayment:hover{
+    background-color: hsl(224, 23%, 55%);
+}
+#cancelOrder {
+    border-radius: 15px;
+    color: lightslategray;
+    margin: 5% 15% 5% 15%;
+    padding: 15px;
+}
+#cancelOrder:hover {
+    color: black;
+}
