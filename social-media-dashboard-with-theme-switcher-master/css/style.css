@@ -1,0 +1,129 @@
+/*
+#### Dark Theme
+
+- Very Dark Blue (BG): hsl(230, 17%, 14%)
+- Very Dark Blue (Top BG Pattern): hsl(232, 19%, 15%)
+- Dark Desaturated Blue (Card BG): hsl(228, 28%, 20%)
+- Desaturated Blue (Text): hsl(228, 34%, 66%)
+- White (Text): hsl(0, 0%, 100%)
+
+#### Light Theme
+
+- White (BG): hsl(0, 0%, 100%)
+- Very Pale Blue (Top BG Pattern): hsl(225, 100%, 98%)
+- Light Grayish Blue (Card BG): hsl(227, 47%, 96%)
+- Dark Grayish Blue (Text): hsl(228, 12%, 44%)
+- Very Dark Blue (Text): hsl(230, 17%, 14%)
+*/
+/* Light Theme*/
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+body {
+  font-family: 'Inter', sans-serif;
+  padding: 20px auto;
+  display: block;
+  padding: 50px 100px 50px 100px;
+  background-color: white;
+}
+
+h3 {
+  font-size: 64px;
+  margin: 20px auto;
+}
+
+h4 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+h5 {
+  color: green;
+}
+
+#background-shade {
+  background-color: #f5f7ff;
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  left: 0;
+}
+
+.lightTheme {
+  color: #1e202a;
+}
+
+.lightTheme h6 {
+  color: #63687e;
+}
+
+.lightTheme section {
+  background-color: #f0f2fa;
+}
+
+#toggle {
+  float: right;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#large-cards {
+  width: 100%;
+  display: block;
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
+
+#large-cards section {
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  border-radius: 15px;
+}
+
+#large-cards .tagline img {
+  display: inline-block;
+  top: 8px;
+  position: relative;
+  padding-right: 5px;
+}
+
+#large-cards .tagline h6 {
+  display: inline-block;
+}
+
+#large-cards .increments img {
+  display: inline-block;
+  position: relative;
+  padding-right: 10px;
+}
+
+#large-cards .increments h5 {
+  display: inline-block;
+  margin: 0;
+}
+
+#small-cards section {
+  margin: 10px;
+  width: 300px;
+  height: 150px;
+  display: inline-block;
+  border-radius: 15px;
+}
+
+.facebook {
+  border-top: solid #198ff5 5px;
+}
+
+.youtube {
+  border-top: solid #c4032a 5px;
+}
+
+.twitter {
+  border-top: solid #1ca0f2 5px;
+}
+/*# sourceMappingURL=style.css.map */
