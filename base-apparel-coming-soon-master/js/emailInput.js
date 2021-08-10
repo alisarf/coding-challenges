@@ -1,11 +1,34 @@
 //cache text box,button
 
 var emailButton = document.getElementById('email-button');
-console.log('this works')
-//event listener of buttone
-emailButton.addEventListener('click', checkEmail());
+var msg = document.getElementById('msg');
+var errorImg = document.getElementById('email-input');
 
-function checkEmail() {
+//event listener of buttone
+emailButton.addEventListener('click', checkLength, false);
+
+function checkLength() {
     var emailInput = document.getElementById('email-input').value;
-    console.log("hello");
-} ;
+    
+
+    if (emailInput.length < 5) {
+        msg.textContent = "Please provide a valid email";
+        errorImg.classList.add("inputToggle");
+    }  else {
+        console.log(emailInput);
+        checkContent();
+    }
+
+    function checkContent() {
+        //if no @ or .com 
+        if (emailInput.includes('@') && emailInput.includes('.com')){
+            msg.textContent = "";
+            errorImg.classList.remove("inputToggle");
+            alert('Thank you for subscribing!');
+        }   else {
+            msg.textContent = "Please provide a valid email";
+            errorImg.classList.add("inputToggle");
+        }
+    }
+
+};
