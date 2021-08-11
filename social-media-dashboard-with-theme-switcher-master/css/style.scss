@@ -16,6 +16,13 @@
 - Dark Grayish Blue (Text): hsl(228, 12%, 44%)
 - Very Dark Blue (Text): hsl(230, 17%, 14%)
 */
+//Dark Theme
+$veryDarkBlueBG: hsl(230, 17%, 14%);
+$veryDarkBlueTPBG : hsl(232, 19%, 15%);
+$darkDesaturatedBlueCard: hsl(228, 28%, 20%);
+$desaturatedBlueTxt : hsl(228, 34%, 66%);
+$whiteTxt: hsl(0, 0%, 100%);
+
 /* Light Theme*/
 $whiteBG: hsl(0, 0%, 100%);
 $veryPaleBlueTopBG:hsl(225, 100%, 98%);
@@ -27,10 +34,19 @@ $veryDarkBlueText:hsl(230, 17%, 14%);
 
 body{
     font-family: 'Inter', sans-serif;
-    padding: 20px auto;
     display: block;
-    padding: 50px 100px 50px 100px;
-    background-color: $whiteBG;
+    margin: 0;
+}
+#wrapper{
+    margin: 0;
+    padding: 50px 150px;
+    width: 100%;
+    z-index: -1000;
+    position: absolute;
+}
+h2{
+    font-size: 14px;
+    color: $darkGrayBlueText;
 }
 h3 {
     font-size: 64px;
@@ -42,11 +58,8 @@ h4 {
     text-transform: uppercase;
     font-weight: 300;
 }
-h5 {
-    color: green;
-}
+
 #background-shade {
-    background-color: $veryPaleBlueTopBG;
     height: 300px;
     width: 100%;
     position: absolute;
@@ -59,11 +72,41 @@ h5 {
     h6 {
         color: $darkGrayBlueText;
     }
+    h2{
+        color: $darkGrayBlueText;
+    }
     section{
         background-color: $lightGrayBlueCardBG;
+    }
+    #background-shade{
+        background-color: $veryPaleBlueTopBG;
+    }
+    #wrapper {
+        background-color: $whiteBG;
+    }
+
+}
+
+.darkTheme{
+    color: $whiteTxt;
+    h6 {
+        color: $desaturatedBlueTxt;
+    }
+    h2{
 
     }
+    section{
+        background-color: $darkDesaturatedBlueCard;
+    }
+    #background-shade{
+        background-color: $veryDarkBlueTPBG;
+    }
+    #wrapper{
+        background-color: hsl(230, 17%, 20%);
+    }
+
 }
+
 #toggle{
     float: right;
     position: absolute;
@@ -72,16 +115,16 @@ h5 {
 }
 
 #large-cards {
-    width: 100%;
+    width: 1400px; /*could also be 100% if you want to skew*/
     display: block;
-    margin: 0 auto 0 auto;
-    text-align: center;
+    margin: 0 auto 0 0;
     section{
         margin: 10px;
         width: 300px;
         height: 300px;
         display: inline-block;
         border-radius: 15px;
+        text-align: center;
     }
     .tagline{
         img {
@@ -94,33 +137,70 @@ h5 {
             display: inline-block;
         }
     }
-    .increments {
-        img {
-            display: inline-block;
-            position: relative;
-            padding-right: 10px;
-        }
-        h5{
-            display: inline-block;
-            margin: 0;
-        }
-    }
 }
+
+#overview-header{
+    font-size: 24px;
+}
+
 #small-cards {
+    width: 1400px;
+    margin: 0 auto 0 0;
+    display: block;
     section{
         margin: 10px;
-        width: 300px;
-        height: 150px;
+        width: 270px;
+        height: 120px;
         display: inline-block;
         border-radius: 15px;
+        text-align: left;
+        padding: 30px 0px 0px 30px;
+        h3{
+            font-size: 32px;
+        }
+        .increments {
+            float: right;
+            position: relative;
+            right: 30px;
+            bottom: 40px;
+        }
+        .small-cards-icon {
+            float: right;
+            position: relative;
+            top: -30px;
+            right: 30px;
+        }
     }
 }
+
+//Shared between the two types of cards
+.increments {
+    img {
+        display: inline-block;
+        position: relative;
+        padding-right: 10px;
+        padding-bottom: 2px;
+    }
+    h5{
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
+}
+.up h5{
+    color: green;
+}
+.down h5 {
+    color:red;
+}
+
 
 
 .facebook {
     border-top: solid hsl(208, 92%, 53%) 5px
 }
 .instagram {
+    border-top: solid hsl(348, 97%, 39%) 5px
 
 }
 .youtube {
@@ -129,3 +209,49 @@ h5 {
 .twitter {
     border-top: solid hsl(203, 89%, 53%) 5px;
 }
+
+//Toggle Switch 
+#switchbox {
+    float: right;
+    top: -80px;
+    right: 180px;
+    position: relative; //so that it doesnt move with the screen
+    margin-right: 50px;
+    .switch{ //initial view
+        position : relative ;
+        display : inline-block;
+        width : 42px;
+        height : 22px;
+        background: hsl(230, 22%, 74%); //LIGHTMODE
+        border-radius: 20px;
+    }
+    .switch::after{ //layover
+        left: 2px;
+        top: 2px;
+        transition: all 0.3s;
+        border-radius: 50%;
+        height: 18px;
+        width: 18px;
+        position: absolute;
+        content: "";
+        background-color: $whiteBG; //LIGHTMODE
+    }
+    .checkbox:checked + .switch::after{ //layover moves left 20px (->) when checkbox checked
+        left: 22px;
+        background-color: $veryDarkBlueBG; //DARKMODE
+    }
+    .checkbox:checked + .switch {
+        background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%)); //DARKMODE
+    }
+    .checkbox{ //hide the default checkbox 
+        display: none;
+    }
+    .round{
+        border-radius: 20px;
+    }
+    #switch-text {
+        float: left;
+        margin: 2px 10px 0 0;
+    }
+}
+

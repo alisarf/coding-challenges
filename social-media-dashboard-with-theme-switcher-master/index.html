@@ -14,88 +14,105 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
-  <div id="background-shade"></div>
-  <div id="header" class="lightTheme">
-    <div id="dashbord" >
-      <h1>Social Media Dashboard</h1>
-      <p>Total Followers: 23,004</p>
-      <div id="toggle"> Dark Mode</div>
+<body class="lightTheme">
+  <div id="wrapper" class="lightTheme">
+    <div id="background-shade" class="lightTheme"></div>
+    <div id="header" class="lightTheme">
+      <div id="dashbord" >
+        <h1>Social Media Dashboard</h1>
+        <h2>Total Followers: 23,004</h2>
+        <label id="switchbox" class="round">
+          <h2 id="switch-text">Dark Mode</h2>
+          <input type="checkbox" id="toggle" class="checkbox"/>
+          <span class="switch round"></span>
+        </label>
+      </div>
     </div>
+    <div id="large-cards" class="lightTheme">
+      <section class="facebook">
+        <div class=tagline><img src="images/icon-facebook.svg" alt=""><h6>@nathanf</h6></div>
+        <h3>1987</h3>
+        <h4>Followers</h4>
+        <div class="increments up"><img src="images/icon-up.svg" alt=""><h5>12 Today</h5></div>
+      </section>
+      <section class="twitter">
+        <div class=tagline><img src="images/icon-twitter.svg" alt=""><h6>@nathanf</h6></div>
+        <h3>1044</h3>
+        <h4>Followers</h4>
+        <div class="increments up"><img src="images/icon-up.svg" alt=""><h5>99 Today</h5></div>
+
+      </section>
+      <section class="instagram">
+        <div class=tagline><img src="images/icon-instagram.svg" alt=""><h6>@realnathanf</h6></div>
+        <h3>11k</h3>
+        <h4>Followers</h4>
+        <div class="increments up"><img src="images/icon-up.svg" alt=""><h5>1099 Today</h5></div>
+      </section>
+      <section class="youtube">
+        <div class=tagline><img src="images/icon-youtube.svg" alt=""><h6>Nathan F.</h6></div>
+        <h3>8239</h3>
+        <h4>Subscribers</h4>
+        <div class="increments down"><img src="images/icon-down.svg" alt=""><h5>144 Today</h5></div>
+      </section>
+    </div>
+
+    <h2 id="overview-header">Overview - Today</h2>
+
+    <div id="small-cards" class="lightTheme">
+      <section>
+        <h2>Page Views</h2>
+        <img class="small-cards-icon" src="images/icon-facebook.svg" alt="">
+        <h3>87</h3>
+        <div class="increments up"><img src="images/icon-up.svg" alt=""><h5>3%</h5></div>
+      </section>
+      <section>
+        <h2>Likes</h2>
+        <img class="small-cards-icon" src="images/icon-facebook.svg" alt="">
+        <h3>52</h3>
+        <div class="increments down"><img src="images/icon-down.svg" alt=""><h5>2%</h5></div>
+      </section>
+      <section>
+        <h2>Likes</h2>
+        <img class="small-cards-icon" src="images/icon-instagram.svg" alt="">
+        <h3>5462</h3>
+        <div class="increments up"><img src="images/icon-up.svg" alt=""><h5>2257%</h5></div>
+      </section>
+      <section>
+        <h2>Profile Views</h2>
+        <img class="small-cards-icon" src="images/icon-instagram.svg" alt="">
+        <h3>52k</h3>
+        <div class="increments up"><img src="images/icon-up.svg" alt=""><h5>1375%</h5></div>
+      </section>
+      <section>
+        <h2>Retweets</h2>
+        <img class="small-cards-icon" src="images/icon-twitter.svg" alt="">
+        <h3>117</h3>
+        <div class="increments up"><img src="images/icon-up.svg" alt=""><h5>303%</h5></div>
+      </section>
+      <section>
+        <h2>Likes</h2>
+        <img class="small-cards-icon" src="images/icon-twitter.svg" alt="">
+        <h3>507</h3>
+        <div class="increments up"><img src="images/icon-up.svg" alt=""><h5>553%</h5></div>
+      </section>
+      <section>
+        <h2>Likes</h2>
+        <img class="small-cards-icon" src="images/icon-youtube.svg" alt="">
+        <h3>107</h3>
+        <div class="increments down"><img src="images/icon-down.svg" alt=""><h5>19%</h5></div>
+      </section>
+      <section>
+        <h2>Total Views</h2>
+        <img class="small-cards-icon" src="images/icon-youtube.svg" alt="">
+        <h3>1407</h3>
+        <div class="increments down"><img src="images/icon-down.svg" alt=""><h5>12%</h5></div>
+      </section>
+    </div>
+
+
+
   </div>
-  <div id="large-cards" class="lightTheme">
-    <section class="facebook">
-      <div class=tagline><img src="images/icon-facebook.svg" alt=""><h6>@nathanf</h6></div>
-      <h3>1987</h3>
-      <h4>Followers</h4>
-      <div class="increments"><img src="images/icon-up.svg" alt=""><h5>12 Today</h5></div>
-    </section>
-    <section class="twitter">
-      <div class=tagline><img src="images/icon-twitter.svg" alt=""><h6>@nathanf</h6></div>
-      <h3>1044</h3>
-      <h4>Followers</h4>
-      <div class="increments"><img src="images/icon-up.svg" alt=""><h5>99 Today</h5></div>
 
-    </section>
-    <section class="instagram">
-      <div class=tagline><img src="images/icon-instagram.svg" alt=""><h6>@realnathanf</h6></div>
-      <h3>11k</h3>
-      <h4>Followers</h4>
-      <div class="increments"><img src="images/icon-up.svg" alt=""><h5>1099 Today</h5></div>
-    </section>
-    <section class="youtube">
-      <div class=tagline><img src="images/icon-youtube.svg" alt=""><h6>Nathan F.</h6></div>
-      <h3>8239</h3>
-      <h4>Subscribers</h4>
-      <div class="increments down"><img src="images/icon-down.svg" alt=""><h5>144 Today</h5></div>
-    </section>
-  </div>
-
-  <h2>Overview - Today</h2>
-
-  <div id="small-cards" class="lightTheme">
-    <section>
-      Page Views
-      87
-      3%
-    </section>
-    <section>
-      Likes
-      52
-      2%
-    </section>
-    <section>
-      Likes
-      5462
-      2257%
-    </section>
-    <section>
-      Profile Views
-      52k
-      1375%
-    </section>
-    <section>
-      Retweets
-      117
-      303%
-    </section>
-    <section>
-      Likes
-      507
-      553%
-    </section>
-    <section>
-      Likes
-      107
-      19%
-    </section>
-    <section>
-      Total Views
-      1407
-      12%
-    </section>
-  </div>
-  
-
+  <script src="js/themeToggle.js"></script>
 </body>
 </html>
