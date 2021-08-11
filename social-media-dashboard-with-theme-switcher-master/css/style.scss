@@ -1,21 +1,4 @@
-
-/*
-#### Dark Theme
-
-- Very Dark Blue (BG): hsl(230, 17%, 14%)
-- Very Dark Blue (Top BG Pattern): hsl(232, 19%, 15%)
-- Dark Desaturated Blue (Card BG): hsl(228, 28%, 20%)
-- Desaturated Blue (Text): hsl(228, 34%, 66%)
-- White (Text): hsl(0, 0%, 100%)
-
-#### Light Theme
-
-- White (BG): hsl(0, 0%, 100%)
-- Very Pale Blue (Top BG Pattern): hsl(225, 100%, 98%)
-- Light Grayish Blue (Card BG): hsl(227, 47%, 96%)
-- Dark Grayish Blue (Text): hsl(228, 12%, 44%)
-- Very Dark Blue (Text): hsl(230, 17%, 14%)
-*/
+//COLOR PALLETES
 //Dark Theme
 $veryDarkBlueBG: hsl(230, 17%, 14%);
 $veryDarkBlueTPBG : hsl(232, 19%, 15%);
@@ -23,7 +6,7 @@ $darkDesaturatedBlueCard: hsl(228, 28%, 20%);
 $desaturatedBlueTxt : hsl(228, 34%, 66%);
 $whiteTxt: hsl(0, 0%, 100%);
 
-/* Light Theme*/
+//Light Theme
 $whiteBG: hsl(0, 0%, 100%);
 $veryPaleBlueTopBG:hsl(225, 100%, 98%);
 $lightGrayBlueCardBG:hsl(227, 47%, 96%);
@@ -36,6 +19,7 @@ body{
     font-family: 'Inter', sans-serif;
     display: block;
     margin: 0;
+    height:100%;
 }
 #wrapper{
     margin: 0;
@@ -44,6 +28,7 @@ body{
     z-index: -1000;
     position: absolute;
 }
+//UNIVERSAL FONTS
 h2{
     font-size: 14px;
     color: $darkGrayBlueText;
@@ -58,55 +43,7 @@ h4 {
     text-transform: uppercase;
     font-weight: 300;
 }
-
-#background-shade {
-    height: 300px;
-    width: 100%;
-    position: absolute;
-    z-index: -100;
-    top: 0;
-    left: 0;
-}
-.lightTheme {
-    color: $veryDarkBlueText;
-    h6 {
-        color: $darkGrayBlueText;
-    }
-    h2{
-        color: $darkGrayBlueText;
-    }
-    section{
-        background-color: $lightGrayBlueCardBG;
-    }
-    #background-shade{
-        background-color: $veryPaleBlueTopBG;
-    }
-    #wrapper {
-        background-color: $whiteBG;
-    }
-
-}
-
-.darkTheme{
-    color: $whiteTxt;
-    h6 {
-        color: $desaturatedBlueTxt;
-    }
-    h2{
-
-    }
-    section{
-        background-color: $darkDesaturatedBlueCard;
-    }
-    #background-shade{
-        background-color: $veryDarkBlueTPBG;
-    }
-    #wrapper{
-        background-color: hsl(230, 17%, 20%);
-    }
-
-}
-
+//TOGGLE DIV
 #toggle{
     float: right;
     position: absolute;
@@ -125,6 +62,7 @@ h4 {
         display: inline-block;
         border-radius: 15px;
         text-align: center;
+        cursor: pointer;
     }
     .tagline{
         img {
@@ -155,6 +93,7 @@ h4 {
         border-radius: 15px;
         text-align: left;
         padding: 30px 0px 0px 30px;
+        cursor: pointer;
         h3{
             font-size: 32px;
         }
@@ -173,7 +112,8 @@ h4 {
     }
 }
 
-//Shared between the two types of cards
+//UP-DOWN ARROW ICONS
+//Shared between the two card sizes
 .increments {
     img {
         display: inline-block;
@@ -187,14 +127,16 @@ h4 {
         padding: 0;
     }
 }
+
+//CORRESPONDING HEADER COLOR TO ARROW MEANING
 .up h5{
-    color: green;
+    color: hsl(163, 72%, 41%);
 }
 .down h5 {
-    color:red;
+    color:hsl(356, 69%, 56%);
 }
 
-
+//CARD BORDERTOPS
 
 .facebook {
     border-top: solid hsl(208, 92%, 53%) 5px
@@ -210,7 +152,7 @@ h4 {
     border-top: solid hsl(203, 89%, 53%) 5px;
 }
 
-//Toggle Switch 
+//TOGGLE SWITCH
 #switchbox {
     float: right;
     top: -80px;
@@ -218,6 +160,7 @@ h4 {
     position: relative; //so that it doesnt move with the screen
     margin-right: 50px;
     .switch{ //initial view
+        cursor: pointer;
         position : relative ;
         display : inline-block;
         width : 42px;
@@ -236,6 +179,17 @@ h4 {
         content: "";
         background-color: $whiteBG; //LIGHTMODE
     }
+
+    //HOVER STATES
+    .switch:hover{
+        background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%)); //DARKMODE
+
+    }
+    .switch::after:hover{
+        background-color: $veryDarkBlueTPBG; //DARKMODE
+    }
+
+    //CHECKED DARK STATES
     .checkbox:checked + .switch::after{ //layover moves left 20px (->) when checkbox checked
         left: 22px;
         background-color: $veryDarkBlueBG; //DARKMODE
@@ -255,3 +209,92 @@ h4 {
     }
 }
 
+
+//DARK & LIGHT THEMES
+.lightTheme {
+    color: $veryDarkBlueText;
+    h6 {
+        color: $darkGrayBlueText;
+    }
+    h2{
+        color: $darkGrayBlueText;
+    }
+    section{
+        background-color: $lightGrayBlueCardBG;
+    }
+    section:hover{
+        background-color: hsl(227, 47%, 90%);
+    }
+    #background-shade{
+        background-color: $veryPaleBlueTopBG;
+    }
+    #wrapper {
+        background-color: $whiteBG;
+    }
+
+}
+
+.darkTheme{
+    color: $whiteTxt;
+    h6 {
+        color: $desaturatedBlueTxt;
+    }
+    h2{
+        color: $whiteTxt;
+    }
+    section{
+        background-color: $darkDesaturatedBlueCard;
+    }
+    section:hover{
+        background-color: hsl(228, 28%, 28%);
+    }
+    #background-shade{
+        background-color: $veryDarkBlueTPBG;
+    }
+    #wrapper{
+        background-color: hsl(230, 17%, 20%);
+    }
+
+}
+
+
+//MOBILE RESPONSIVENESS
+@media only screen and (max-width: 900px) {
+    #large-cards {
+        section{
+            display: block;
+        }
+    }
+    #small-cards{
+        section{
+            display:block;
+        }
+    }
+    #dashboard{
+        margin-bottom: 100px;
+
+    }
+    #switchbox{
+        float: left;
+        top: 0;
+        right: 0;
+        display: block;
+        border-top: solid 2px $darkGrayBlueText;
+        width: 300px;
+        padding-top:20px;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+    .switch {
+        float: right;
+    }
+    .checkbox{
+        float:right;
+    }
+    #wrapper {
+        padding: 50px 25px;
+    }
+    h1 {
+        font-size: 26px;
+    }
+}

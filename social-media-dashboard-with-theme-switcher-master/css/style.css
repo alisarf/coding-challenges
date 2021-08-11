@@ -1,26 +1,9 @@
-/*
-#### Dark Theme
-
-- Very Dark Blue (BG): hsl(230, 17%, 14%)
-- Very Dark Blue (Top BG Pattern): hsl(232, 19%, 15%)
-- Dark Desaturated Blue (Card BG): hsl(228, 28%, 20%)
-- Desaturated Blue (Text): hsl(228, 34%, 66%)
-- White (Text): hsl(0, 0%, 100%)
-
-#### Light Theme
-
-- White (BG): hsl(0, 0%, 100%)
-- Very Pale Blue (Top BG Pattern): hsl(225, 100%, 98%)
-- Light Grayish Blue (Card BG): hsl(227, 47%, 96%)
-- Dark Grayish Blue (Text): hsl(228, 12%, 44%)
-- Very Dark Blue (Text): hsl(230, 17%, 14%)
-*/
-/* Light Theme*/
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 body {
   font-family: 'Inter', sans-serif;
   display: block;
   margin: 0;
+  height: 100%;
 }
 
 #wrapper {
@@ -48,59 +31,6 @@ h4 {
   font-weight: 300;
 }
 
-#background-shade {
-  height: 300px;
-  width: 100%;
-  position: absolute;
-  z-index: -100;
-  top: 0;
-  left: 0;
-}
-
-.lightTheme {
-  color: #1e202a;
-}
-
-.lightTheme h6 {
-  color: #63687e;
-}
-
-.lightTheme h2 {
-  color: #63687e;
-}
-
-.lightTheme section {
-  background-color: #f0f2fa;
-}
-
-.lightTheme #background-shade {
-  background-color: #f5f7ff;
-}
-
-.lightTheme #wrapper {
-  background-color: white;
-}
-
-.darkTheme {
-  color: white;
-}
-
-.darkTheme h6 {
-  color: #8b97c6;
-}
-
-.darkTheme section {
-  background-color: #252a41;
-}
-
-.darkTheme #background-shade {
-  background-color: #1f212e;
-}
-
-.darkTheme #wrapper {
-  background-color: #2a2d3c;
-}
-
 #toggle {
   float: right;
   position: absolute;
@@ -122,6 +52,7 @@ h4 {
   display: inline-block;
   border-radius: 15px;
   text-align: center;
+  cursor: pointer;
 }
 
 #large-cards .tagline img {
@@ -153,6 +84,7 @@ h4 {
   border-radius: 15px;
   text-align: left;
   padding: 30px 0px 0px 30px;
+  cursor: pointer;
 }
 
 #small-cards section h3 {
@@ -187,11 +119,11 @@ h4 {
 }
 
 .up h5 {
-  color: green;
+  color: #1db489;
 }
 
 .down h5 {
-  color: red;
+  color: #dc414c;
 }
 
 .facebook {
@@ -219,6 +151,7 @@ h4 {
 }
 
 #switchbox .switch {
+  cursor: pointer;
   position: relative;
   display: inline-block;
   width: 42px;
@@ -238,6 +171,15 @@ h4 {
   position: absolute;
   content: "";
   background-color: white;
+}
+
+#switchbox .switch:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#378fe6), to(#3eda82));
+  background: linear-gradient(#378fe6, #3eda82);
+}
+
+#switchbox .switch::after:hover {
+  background-color: #1f212e;
 }
 
 #switchbox .checkbox:checked + .switch::after {
@@ -261,5 +203,96 @@ h4 {
 #switchbox #switch-text {
   float: left;
   margin: 2px 10px 0 0;
+}
+
+.lightTheme {
+  color: #1e202a;
+}
+
+.lightTheme h6 {
+  color: #63687e;
+}
+
+.lightTheme h2 {
+  color: #63687e;
+}
+
+.lightTheme section {
+  background-color: #f0f2fa;
+}
+
+.lightTheme section:hover {
+  background-color: #dadff1;
+}
+
+.lightTheme #background-shade {
+  background-color: #f5f7ff;
+}
+
+.lightTheme #wrapper {
+  background-color: white;
+}
+
+.darkTheme {
+  color: white;
+}
+
+.darkTheme h6 {
+  color: #8b97c6;
+}
+
+.darkTheme h2 {
+  color: white;
+}
+
+.darkTheme section {
+  background-color: #252a41;
+}
+
+.darkTheme section:hover {
+  background-color: #333b5b;
+}
+
+.darkTheme #background-shade {
+  background-color: #1f212e;
+}
+
+.darkTheme #wrapper {
+  background-color: #2a2d3c;
+}
+
+@media only screen and (max-width: 900px) {
+  #large-cards section {
+    display: block;
+  }
+  #small-cards section {
+    display: block;
+  }
+  #dashboard {
+    margin-bottom: 100px;
+  }
+  #switchbox {
+    float: left;
+    top: 0;
+    right: 0;
+    display: block;
+    border-top: solid 2px #63687e;
+    width: 300px;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  .switch {
+    float: right;
+  }
+  .checkbox {
+    float: right;
+  }
+  #wrapper {
+    padding: 50px 25px;
+  }
+  h1 {
+    font-size: 26px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
