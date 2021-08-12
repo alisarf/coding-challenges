@@ -261,18 +261,25 @@ h4 {
 //MOBILE RESPONSIVENESS
 @media only screen and (max-width: 900px) {
     #large-cards {
+        width: 320px;
+        margin: 0 auto;
+        display: block;
         section{
             display: block;
         }
     }
     #small-cards{
+        width: 320px;
+        margin: 0 auto 60px auto;
+        display: block;
         section{
             display:block;
         }
     }
     #dashboard{
-        margin-bottom: 100px;
-
+        margin: 0 auto 100px auto;
+        display: block;
+        width: 300px;
     }
     #switchbox{
         float: left;
@@ -292,7 +299,12 @@ h4 {
         float:right;
     }
     #wrapper {
-        padding: 50px 25px;
+        padding: 50px 0 0 0;
+    }
+    #overview-header {
+        display: block;
+        margin: 30px auto 30px auto;
+        width: 300px;
     }
     h1 {
         font-size: 26px;
