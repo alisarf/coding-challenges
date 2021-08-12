@@ -1,0 +1,231 @@
+//COLOR PALLETE
+$veryDarkCyan: hsl(183, 100%, 15%);
+$darkGrayishCyan: hsl(186, 14%, 43%);
+$darkGrayishCyan: hsl(184, 14%, 56%);
+$lightGrayishCyan: hsl(185, 41%, 84%);
+$lightestGrayishCyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+$primaryCyan: hsl(172, 67%, 45%);
+
+//'Space Mono'
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+//Weights: 400, 500, 700
+
+
+body{
+    background:$lightGrayishCyan;
+    font-family: 'Space Mono';
+}
+h1{
+    margin: 80px auto 40px auto;
+    display: block;
+    width: 100px;
+    color: $veryDarkCyan;
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+h3{
+    font-size: 14px;
+    color: $veryDarkCyan;
+    margin: 0 0 5px 0;
+}
+h4{
+    font-size: 14px;
+    color: $white;
+}
+h6{
+    font-size: 12px;
+    color: $white;
+}
+#wrapper{
+    background: $white;
+    margin: 0 auto 0 auto;
+    display: block;
+    width: 850px;
+    padding: 40px;
+    border-radius: 20px;
+}
+.bumper{
+    margin-bottom: 30px;
+}
+.entry-wrapper{
+    width: 400px;
+
+    .entry-box{
+        font-family: 'Space Mono';
+        font-size: 20px;
+        font-weight: 700;
+        padding: 5px 20px 5px 0;
+        color: $veryDarkCyan;
+        border: 0;
+        width: 380px;
+        height: 35px;
+    }
+    .entry-box:focus{
+        outline: 0;
+    }
+    input{
+        background: $lightestGrayishCyan;
+        border-radius: 5px;
+        background-position: left; //set to left
+        background-position-x: 2%; //move a hair over from left
+        background-repeat: no-repeat;
+        text-align: right;
+        cursor: pointer;
+    }
+    input#bill:focus{
+        border:solid 2px $primaryCyan;
+    }
+    #bill{
+        background-image: url('../images/icon-dollar.svg');
+    }
+    #people{
+        background-image: url('../images/icon-person.svg');
+    }
+    .percent{
+        width: 126px;
+        border-radius: 5px;
+        margin: 5px 0;
+        padding: 8px 0;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        background: $veryDarkCyan;
+        color: $white;
+    }
+    .checkbox{
+        display: none;
+        width: 126px;
+        position: relative;
+        top:0;
+        left: 0;
+        
+
+    }
+
+    input{
+        border-style: none;
+        font-family: 'Space Mono';
+        text-transform: uppercase;
+    }
+    #custom-tip{
+        background-color: $lightestGrayishCyan;
+        color: $veryDarkCyan;
+    }
+    #selected{
+        background-color: $primaryCyan;
+        color: $veryDarkCyan;
+    }
+}
+
+.percent:checked {
+    background: $lightestGrayishCyan;
+}
+#return-results{
+    background: $veryDarkCyan;
+    width: 320px;
+    height: 300px;
+    display: inline-block;
+    position: relative;
+    float: right;
+    top: -350px; //-40px margintop
+    right: 0;
+    border-radius: 10px;
+    padding: 25px 40px;
+    .tip-amount{
+        margin: 20px 0;
+        h4{
+            color: $white;
+            width: 150px;
+            display: block;
+            /* float: left; */
+            margin: 0;
+        }
+        h6{
+            font-size: 12px;
+            font-weight: 400;
+            color: $primaryCyan;
+            margin: 0;
+            width: 150px;
+            display: block;
+        }
+        //written by children more efficient
+        .tip-digits{
+            position: relative;
+            right: 0;
+            top: -46px;
+            float: right;
+            position: relative;
+            font-size: 32px;
+            color: $primaryCyan;
+        }
+        
+        span{
+            color: $primaryCyan;
+        }
+        
+    }
+}
+.button{
+    width: 320px;
+    height: 45px;
+    background: $primaryCyan;
+    color: $veryDarkCyan;
+    border: 0;
+    border-radius: 5px;
+    margin: 0 auto 30px auto;
+    display: block;
+    bottom: 0;
+    position: absolute;
+    right: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+@media only screen and (max-width:700px) {
+    #wrapper {
+        width: 100%;
+        padding: 10px 0 10px 0;
+        border-radius: 20px 20px 0 0;
+    }
+    h3{
+        padding-top: 20px;
+    }
+    .entry-wrapper{
+        width: 280px;
+        margin: 0 auto;
+        display: block;
+        .entry-box {
+            width: 100%;
+            padding-right: 0px;
+
+        }
+        .percent{
+            width: 130px;
+        }
+    }
+    body{
+        margin: 0;
+    }
+    #return-results{
+        float: none;
+        top: 0;
+        padding: 30px 0;
+        width: 280px;
+        height: 200px;
+        margin: 20px auto 20px auto;
+        display: block;
+        .tip-amount{
+            margin: 20px 20px;
+        }
+    }
+    .button{
+        float: none;
+        right: 10px;
+        width: 260px;
+    }
+}

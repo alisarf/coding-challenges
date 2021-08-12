@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <h1>Spli<br>tter</h1>
+  <div id="wrapper">
+    
+    <div class="entry-wrapper bumper">
+      <h3>Bill</h3>
+      <input type="text" class="entry-box" id="bill"></input>
+    </div>
+    <div class="entry-wrapper bumper">
+      <h3>Select Tip %</h3>
+      <div class="percent"><input type="checkbox" class="checkbox">5%</input></div>
+      <div class="percent"><input type="checkbox" class="checkbox">10%</input></div>
+      <div class="percent"><input type="checkbox" class="checkbox">15%</input></div>
+      <div class="percent"><input type="checkbox" class="checkbox">25%</input></div>
+      <div class="percent"><input type="checkbox" class="checkbox">50%</input></div>
+      <div class="percent" id="custom-tip">Custom</div>
+    </div>
+    <div class="entry-wrapper">
+      <h3>Number of People</h3>
+      <input type="number" class="entry-box" id="people"></input>
+    </div>
+    <div id="return-results">
+      <div class="tip-amount"><h4>Tip Amount</h4><h6>/ person</h6><span class="tip-digits" id="tip-output-person">$00.00</span></div>
+      <div class="tip-amount"><h4>Total</h4><h6>/ person</h6><span class="tip-digits" id="tip-output-total">$00.00</span></div>
+      <button class="button">Reset</button>
+    </div>
+  </div>
+
+
+  <!--
+  Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset
+  -->
+  
+  <script src="js/calculator.js"></script>
+
+</body>
+</html>
