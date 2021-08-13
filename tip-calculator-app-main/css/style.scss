@@ -95,14 +95,18 @@ h6{
         background: $veryDarkCyan;
         color: $white;
     }
+    .percent:hover{
+        background: $lightGrayishCyan;
+        color: $veryDarkCyan;
+    }
+
     .checkbox{
         display: none;
         width: 126px;
         position: relative;
         top:0;
         left: 0;
-        
-
+        //background: yellow;
     }
 
     input{
@@ -120,9 +124,10 @@ h6{
     }
 }
 
-.percent:checked {
-    background: $lightestGrayishCyan;
-}
+
+
+
+
 #return-results{
     background: $veryDarkCyan;
     width: 320px;

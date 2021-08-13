@@ -1,18 +1,28 @@
+
+
 //Grab #bill input
 var bill = document.getElementById('bill'); //put in fxn
 var billInput; //create global scope
-
-
+var selectedPercent;
 
 //Grab #people input
 var people = document.getElementById('people');
 var peopleInput;
 
+//Grab #custom input
+var custom = document.getElementById('custom');
+var customInput;
 
-//Grab #tip-output-person
+//create error message 
+var errorDiv = document.createElement('div');
+var errorDivBill = document.createElement('div');
+errorDivBill.innerText = 'Please enter a number';
+errorDiv.innerText = 'Please enter a number';
+var customError = document.getElementById('custom-tip');
+//customError.append(errorDiv);
+
+//Grab #Output Divs
 var tipOutputPerson = document.getElementById('tip-output-person');
-
-//Grab #tip-output-total
 var tipOutputTotal = document.getElementById('tip-output-total');
 
 //grab percent amount on click- take textvalue
@@ -21,49 +31,182 @@ console.log(percentSelected);
 
 //grab on blur
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 bill.addEventListener('blur', function(){
     billInput = document.getElementById('bill').value;
-    //console.log(billInput);
-
-    //test output total
-    //tipOutputTotal.innerText = '$' + billInput;
+    if(billInput != Number) {
+        console.log('not a number')
+        bill.append(errorDivBill);
+    } else {
+    allInputsMet(selectedPercent);
+    }
 },false);
+
+
 
 people.addEventListener('blur', function(){
     peopleInput = document.getElementById('people').value;
-    console.log(peopleInput);
-
-
-
-    //test output total
-    tipOutputPerson.innerText = '$' + peopleInput;
+    allInputsMet(selectedPercent);
 },false);
 
+
+
+
+
+
+//Event listeners for Percents and custom
 percentSelected.forEach(function(element, index) {
     element.addEventListener("click", function() {
         selectedPercent = element.innerText;
-        customOrNumber(selectedPercent);
-    })
+        element.style.background = 'hsl(185, 41%, 84%)';
+        element.style.color = 'hsl(183, 100%, 15%)';
+        allInputsMet(selectedPercent);
+    }, false);
 })
+
+custom.addEventListener("blur", function(event) {
+        selectedPercent = event.target.value;
+        element = event.target;
+        element.style.background = 'hsl(185, 41%, 84%)';
+        element.style.color = 'hsl(183, 100%, 15%)';
+        allInputsMet(selectedPercent);
+},false);
+
+
+
+
+
+
+
+
+
+
+
+
+//All inputs met
+function allInputsMet(selectedPercent){
+    if (billInput != null && peopleInput != null && selectedPercent !=null) {
+        console.log('all values present');
+        customOrNumber(selectedPercent);
+    };
+};
+
+
+
+
+
+
+//RESET 
+resetButton = document.getElementById('resetButton');
+console.log(resetButton);
+resetButton.addEventListener("click", function(){
+    console.log('reset hitt');
+    tipOutputTotal.innerText = "$00.00";
+    tipOutputPerson.innerText = "$00.00";
+    document.getElementById('bill').value = '';
+    document.getElementById('people').value = '';
+},false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function customOrNumber(selectedPercent){
     if (selectedPercent.endsWith("%")) {
-        //remove percent character
-        var el = selectedPercent.substring(0, selectedPercent.lastIndexOf("%"));
-        //convert to number
-        var numberPercent = Number(el);
-        console.log(numberPercent + 10);
-        calculator(numberPercent);
-
+        var numberTip = createNumber(selectedPercent);
+        errorDiv.innerText = '';
+        calculator(numberTip);
+    } else if (!isNaN(selectedPercent)){
+        //send to calculator
+        errorDiv.innerText = '';
+        calculator(selectedPercent);
     } else {
-        console.log('its custom');
+        customError.append(errorDiv);
     }
 }
 
+
+
+
+
+
+
+
+//Calculate the outputs
 function calculator(percent) {
     var totalAmount = (percent/100) * billInput;
     var totalPerPerson = (totalAmount/peopleInput);
 
+    // do this when all inputs are submitted
     tipOutputTotal.innerText = '$' + totalAmount.toFixed(2);
     tipOutputPerson.innerText = '$' + totalPerPerson.toFixed(2);
+}
+
+
+//Creates number format
+function createNumber(percent){
+    var el = percent.substring(0, percent.lastIndexOf("%"));
+    var elPercent = Number(el);
+    return elPercent;
 }

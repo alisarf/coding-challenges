@@ -24,12 +24,14 @@
     </div>
     <div class="entry-wrapper bumper">
       <h3>Select Tip %</h3>
-      <div class="percent"><input type="checkbox" class="checkbox">5%</input></div>
-      <div class="percent"><input type="checkbox" class="checkbox">10%</input></div>
-      <div class="percent"><input type="checkbox" class="checkbox">15%</input></div>
-      <div class="percent"><input type="checkbox" class="checkbox">25%</input></div>
-      <div class="percent"><input type="checkbox" class="checkbox">50%</input></div>
-      <div class="percent" id="custom-tip">Custom</div>
+      <form>
+        <div class="percent"><input type="radio" name="checkPercent" value= "5%" class="checkbox"/>5%</input></div>
+        <div class="percent"><input type="radio" name="checkPercent" value= "10%" class="checkbox"/>10%</input></div>
+        <div class="percent"><input type="radio" name="checkPercent" value= "15%" class="checkbox"/>15%</input></div>
+        <div class="percent"><input type="radio" name="checkPercent" value= "25%" class="checkbox"/>25%</input></div>
+        <div class="percent"><input type="radio" name="checkPercent" value= "50%" class="checkbox"/>50%</input></div>
+        <div id="custom-tip"><input type="text" placeholder="CUSTOM" id="custom" value="custom"></input></div>
+      </form>
     </div>
     <div class="entry-wrapper">
       <h3>Number of People</h3>
@@ -38,7 +40,7 @@
     <div id="return-results">
       <div class="tip-amount"><h4>Tip Amount</h4><h6>/ person</h6><span class="tip-digits" id="tip-output-person">$00.00</span></div>
       <div class="tip-amount"><h4>Total</h4><h6>/ person</h6><span class="tip-digits" id="tip-output-total">$00.00</span></div>
-      <button class="button">Reset</button>
+      <button class="button" id="resetButton">Reset</button>
     </div>
   </div>
 

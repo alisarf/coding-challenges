@@ -97,6 +97,11 @@ h6 {
   color: white;
 }
 
+.entry-wrapper .percent:hover {
+  background: #c5e4e7;
+  color: #00494d;
+}
+
 .entry-wrapper .checkbox {
   display: none;
   width: 126px;
@@ -119,10 +124,6 @@ h6 {
 .entry-wrapper #selected {
   background-color: #26c0ab;
   color: #00494d;
-}
-
-.percent:checked {
-  background: #f4fafa;
 }
 
 #return-results {
