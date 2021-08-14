@@ -1,4 +1,8 @@
+/*TO-Do: 
+APPEND ERROR MESSAGE WHEN NOT NUMBER VALUE for CUSTOM 
+then style div
 
+CLEAR PEOPLE COUNT VARIABLE WITH RESET*/
 
 //Grab #bill input
 var bill = document.getElementById('bill'); //put in fxn
@@ -29,27 +33,6 @@ var tipOutputTotal = document.getElementById('tip-output-total');
 var percentSelected = [].slice.call(document.getElementsByClassName('percent'));
 console.log(percentSelected);
 
-//grab on blur
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -58,19 +41,18 @@ console.log(percentSelected);
 
 bill.addEventListener('blur', function(){
     billInput = document.getElementById('bill').value;
-    if(billInput != Number) {
-        console.log('not a number')
-        bill.append(errorDivBill);
-    } else {
-    allInputsMet(selectedPercent);
-    }
+        if(billInput<1 ){
+            alert('no negatives');
+        } else {
+            allInputsMet(selectedPercent);
+        };
 },false);
 
 
 
 people.addEventListener('blur', function(){
     peopleInput = document.getElementById('people').value;
-    allInputsMet(selectedPercent);
+        allInputsMet(selectedPercent);
 },false);
 
 
@@ -93,7 +75,7 @@ custom.addEventListener("blur", function(event) {
         element = event.target;
         element.style.background = 'hsl(185, 41%, 84%)';
         element.style.color = 'hsl(183, 100%, 15%)';
-        allInputsMet(selectedPercent);
+        customOrNumber(selectedPercent);
 },false);
 
 
@@ -114,10 +96,6 @@ function allInputsMet(selectedPercent){
         customOrNumber(selectedPercent);
     };
 };
-
-
-
-
 
 
 //RESET 
@@ -182,6 +160,7 @@ function customOrNumber(selectedPercent){
         errorDiv.innerText = '';
         calculator(selectedPercent);
     } else {
+        console.log('helppppp')
         customError.append(errorDiv);
     }
 }
