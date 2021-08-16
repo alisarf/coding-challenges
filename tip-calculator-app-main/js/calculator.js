@@ -1,9 +1,3 @@
-/*TO-Do: 
-APPEND ERROR MESSAGE WHEN NOT NUMBER VALUE for CUSTOM 
-then style div
-
-CLEAR PEOPLE COUNT VARIABLE WITH RESET*/
-
 //Grab #bill input
 var bill = document.getElementById('bill'); //put in fxn
 var billInput; //create global scope
@@ -17,13 +11,15 @@ var peopleInput;
 var custom = document.getElementById('custom');
 var customInput;
 
+//BACKGROUND RESET Element
+var cachedEl;
+
 //create error message 
 var errorDiv = document.createElement('div');
 var errorDivBill = document.createElement('div');
 errorDivBill.innerText = 'Please enter a number';
 errorDiv.innerText = 'Please enter a number';
 var customError = document.getElementById('custom-tip');
-//customError.append(errorDiv);
 
 //Grab #Output Divs
 var tipOutputPerson = document.getElementById('tip-output-person');
@@ -31,7 +27,6 @@ var tipOutputTotal = document.getElementById('tip-output-total');
 
 //grab percent amount on click- take textvalue
 var percentSelected = [].slice.call(document.getElementsByClassName('percent'));
-console.log(percentSelected);
 
 
 
@@ -39,24 +34,26 @@ console.log(percentSelected);
 
 
 
-bill.addEventListener('blur', function(){
+
+//All events met for bill/people/custom
+
+bill.addEventListener('input', function(){
     billInput = document.getElementById('bill').value;
+        /*
         if(billInput<1 ){
             alert('no negatives');
         } else {
             allInputsMet(selectedPercent);
         };
+        */
+    allInputsMet(selectedPercent);
 },false);
 
 
-
-people.addEventListener('blur', function(){
+people.addEventListener('input', function(){
     peopleInput = document.getElementById('people').value;
         allInputsMet(selectedPercent);
 },false);
-
-
-
 
 
 
@@ -64,7 +61,8 @@ people.addEventListener('blur', function(){
 percentSelected.forEach(function(element, index) {
     element.addEventListener("click", function() {
         selectedPercent = element.innerText;
-        element.style.background = 'hsl(185, 41%, 84%)';
+        cachedEl = element;
+        element.style.background = 'hsl(172, 67%, 45%)';
         element.style.color = 'hsl(183, 100%, 15%)';
         allInputsMet(selectedPercent);
     }, false);
@@ -73,26 +71,16 @@ percentSelected.forEach(function(element, index) {
 custom.addEventListener("blur", function(event) {
         selectedPercent = event.target.value;
         element = event.target;
-        element.style.background = 'hsl(185, 41%, 84%)';
+        element.style.background = 'hsl(189, 41%, 97%)';
         element.style.color = 'hsl(183, 100%, 15%)';
-        customOrNumber(selectedPercent);
+        allInputsMet(selectedPercent);
 },false);
-
-
-
-
-
-
-
-
-
 
 
 
 //All inputs met
 function allInputsMet(selectedPercent){
-    if (billInput != null && peopleInput != null && selectedPercent !=null) {
-        console.log('all values present');
+    if (billInput != null && (peopleInput > 0) && selectedPercent != null) {
         customOrNumber(selectedPercent);
     };
 };
@@ -100,53 +88,22 @@ function allInputsMet(selectedPercent){
 
 //RESET 
 resetButton = document.getElementById('resetButton');
-console.log(resetButton);
 resetButton.addEventListener("click", function(){
-    console.log('reset hitt');
     tipOutputTotal.innerText = "$00.00";
     tipOutputPerson.innerText = "$00.00";
     document.getElementById('bill').value = '';
     document.getElementById('people').value = '';
+    document.getElementById('custom').value = '';
+    //Delete all variable history
+    peopleInput = undefined;
+    billInput = undefined;
+    selectedPercent = undefined;
+    //Reset Percent Styling
+    if(cachedEl !== undefined) {
+        cachedEl.style.background ='hsl(183, 100%, 15%)';
+        cachedEl.style.color = 'hsl(0, 0%, 100%)'
+    }
 },false);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -160,22 +117,16 @@ function customOrNumber(selectedPercent){
         errorDiv.innerText = '';
         calculator(selectedPercent);
     } else {
-        console.log('helppppp')
         customError.append(errorDiv);
     }
 }
 
 
-
-
-
-
-
-
 //Calculate the outputs
 function calculator(percent) {
-    var totalAmount = (percent/100) * billInput;
-    var totalPerPerson = (totalAmount/peopleInput);
+    //totalAmount 
+    var totalPerPerson = ((percent/100) * billInput) / peopleInput;
+    var totalAmount = totalPerPerson + (billInput/peopleInput);
 
     // do this when all inputs are submitted
     tipOutputTotal.innerText = '$' + totalAmount.toFixed(2);
