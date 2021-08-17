@@ -1,7 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;900&display=swap");
 body {
   padding: 0;
   margin: 0;
   height: 100%;
+}
+
+p {
+  font-family: 'Barlow';
+}
+
+h1, h3, a[title] {
+  font-family: 'Fraunces';
+}
+
+h1 {
+  font-size: 48px;
+  letter-spacing: 4px;
+  font-weight: 900;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Fraunces';
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 80px 0;
+  color: #818498;
+}
+
+h5 {
+  font-family: 'Barlow';
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  display: inline-block;
+  margin: 50px 0 0 50px;
+  text-transform: lowercase;
+}
+
+h6 {
+  font-weight: 900;
+  font-family: 'Fraunces';
+  font-size: 30px;
+  margin: 50px 0;
+}
+
+a#learnMore1 {
+  font-weight: 700;
+  -webkit-text-decoration: underline solid 6px #fff099;
+          text-decoration: underline solid 6px #fff099;
+  text-transform: uppercase;
+  color: black;
+}
+
+a#learnMore2 {
+  font-weight: 700;
+  -webkit-text-decoration: underline solid 6px #fea59a;
+          text-decoration: underline solid 6px #fea59a;
+  text-transform: uppercase;
+  color: black;
+}
+
+a#learnMore1:hover {
+  -webkit-text-decoration: underline solid 6px #fad400;
+          text-decoration: underline solid 6px #fad400;
+}
+
+a#learnMore2:hover {
+  -webkit-text-decoration: underline solid 6px #fe7867;
+          text-decoration: underline solid 6px #fe7867;
 }
 
 .content-wrapper {
@@ -20,10 +96,56 @@ body {
 #header-wrapper #header-arrow {
   width: auto;
   height: auto;
-  position: relative;
   top: 200px;
   text-align: center;
   color: white;
+  position: static;
+  /* top: 400px; */
+  margin-top: 100px;
+}
+
+#header-wrapper nav {
+  display: inline-block;
+  float: right;
+}
+
+#header-wrapper nav ul {
+  width: 100%;
+  padding: 50px 50px 0 0;
+  margin: 0 auto;
+  list-style-type: none;
+  font-size: 16px;
+}
+
+#header-wrapper nav ul li {
+  display: inline-block;
+  padding: 10px 15px;
+}
+
+#header-wrapper nav ul li:last-child {
+  padding: 0;
+}
+
+#header-wrapper nav ul .nav-contact-href:hover {
+  background: rgba(255, 255, 255, 0.438);
+  color: white;
+}
+
+#header-wrapper nav ul .nav-contact-href {
+  padding: 10px 15px;
+  border-radius: 25px;
+  background: white;
+  color: black;
+  text-transform: uppercase;
+  font-family: 'Fraunces';
+  font-weight: 700;
+}
+
+#header-wrapper nav ul a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Barlow';
+  font-weight: 500;
 }
 
 .content {
@@ -36,6 +158,130 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  text-align: left;
+}
+
+.box1-2 {
+  height: auto;
+  margin: 0 auto;
+  width: 300px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.box3-4 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.box3-4 h4 {
+  color: black;
+}
+
+#testimonial-wrapper {
+  display: inline-block;
+  padding: 100px 0 0 0;
+}
+
+#testimonial-wrapper #testomonial-trio {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#testimonial-wrapper p {
+  margin: 75px 0;
+}
+
+.testimonial {
+  display: inline-block;
+  width: 400px;
+  height: 50vh;
+}
+
+.testimonial img {
+  border-radius: 75px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 75px;
+}
+
+.testimonial p {
+  font-size: 18px;
+  margin: 50px 0;
+}
+
+.testimonial cite.name {
+  display: block;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: 'Fraunces';
+}
+
+.testimonial cite.title {
+  color: #a7abae;
+  font-family: 'Barlow';
+}
+
+.testimonial cite {
+  font-style: normal;
+}
+
+.testimonial blockquote {
+  margin: auto 10px;
+}
+
+.stockphoto {
+  width: 25%;
+  height: 50vh;
+  padding: 0;
+  display: inline-block;
+  background-repeat: no-repeat;
+  margin: -4px -2px;
+  background-size: cover;
+}
+
+#footer {
+  background: #8DCDBF;
+  color: #458c7e;
+  text-align: center;
+  height: 250px;
+  padding: 40px 0;
+}
+
+#footer ul {
+  padding: 0;
+  position: relative;
+  top: 50px;
+}
+
+#footer li {
+  display: inline-block;
+}
+
+#footer a {
+  color: #25564b;
+  text-decoration: none;
+  font-family: 'Barlow';
+  padding: 0 10px;
+}
+
+#footer a img:hover {
+  -webkit-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(78deg) brightness(1000%) contrast(100%);
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(78deg) brightness(1000%) contrast(100%);
+}
+
+#footer a:hover {
+  color: white;
 }
 
 #egg {
@@ -54,27 +300,54 @@ body {
   background-image: url("../images/desktop/image-photography.jpg");
 }
 
-.testimonial {
-  display: inline-block;
-  width: 33%;
-  height: 50vh;
-  text-align: center;
+#milk {
+  background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
 }
 
-.testimonial img {
-  border-radius: 75px;
-  display: block;
-  margin: 0 auto;
-  position: relative;
+#bowl {
+  background-image: url("../images/desktop/image-gallery-orange.jpg");
 }
 
-.testimonial p {
-  font-size: 18px;
+#wafflecone {
+  background-image: url("../images/desktop/image-gallery-cone.jpg");
 }
 
-.testimonial cite.name {
-  display: block;
-  font-size: 18px;
-  font-weight: 700;
+#sugar {
+  background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+}
+
+@media only screen and (max-width: 900px) {
+  .content {
+    width: 100%;
+  }
+  .testimonial blockquote {
+    margin: 0;
+  }
+  .testimonial {
+    width: 300px;
+  }
+  #testimonial-wrapper p {
+    margin: 40px 0;
+  }
+  .stockphoto {
+    width: 50%;
+    height: 25vh;
+  }
+  #header-wrapper #header-arrow {
+    margin-top: 50px;
+    top: 0;
+  }
+  #header-wrapper #header-arrow h1 {
+    margin-bottom: 40px;
+  }
+  .box3-4 h4 {
+    margin-bottom: 30px;
+  }
+  .box3-4 p {
+    width: 300px;
+  }
+  #header-wrapper nav ul {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
