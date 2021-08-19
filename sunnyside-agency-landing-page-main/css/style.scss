@@ -120,13 +120,12 @@ a#learnMore2:hover{
         display: inline-block;
         float: right;
         ul{
-            //float: right;
             width: 100%;
-            padding: 50px 50px 0 0;
-            margin: 0 auto;
+            //padding: 50px 50px 0 0;
+            //margin: 0 auto;
+            padding: 0;
             list-style-type: none;
             font-size: 16px;
-            //width: 300px;
             li{
                 display: inline-block;
                 padding: 10px 15px;
