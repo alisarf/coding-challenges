@@ -349,7 +349,11 @@ a#learnMore2:hover {
     width: 300px;
   }
   #header-wrapper nav ul {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
   }
 }
 /*# sourceMappingURL=style.css.map */
