@@ -106,7 +106,10 @@ a#learnMore2:hover {
 
 #header-wrapper nav {
   display: inline-block;
+  position: relative;
   float: right;
+  top: 24px;
+  right: 55px;
 }
 
 #header-wrapper nav ul {

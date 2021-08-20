@@ -118,9 +118,13 @@ a#learnMore2:hover{
     nav{
         //width: 35%;
         display: inline-block;
+        position: relative;
         float: right;
+        top: 24px;
+        right: 55px;
         ul{
             width: 100%;
+            //TODO padding causing page to bleed
             //padding: 50px 50px 0 0;
             //margin: 0 auto;
             padding: 0;
