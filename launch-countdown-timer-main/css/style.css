@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap");
+* {
+  font-family: 'Red Hat Text';
+  font-weight: 400;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #191a24;
+  background-image: url("../images/bg-stars.svg");
+}
+
+h1 {
+  color: white;
+}
+
+h3 {
+  display: block;
+  color: white;
+  font-size: 12px;
+}
+
+h4 {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  font-size: 48px;
+  color: #fb6087;
+  font-weight: 700;
+}
+
+.container-wrapper {
+  width: 700px;
+  margin: 20% auto 10% auto;
+  text-align: center;
+}
+
+.container-wrapper .count_wrapper {
+  display: inline-block;
+  background: #8486a9;
+  margin: 0 20px;
+  z-index: -2;
+  height: 120px;
+  position: relative;
+}
+
+.container-wrapper .count_card {
+  width: 100px;
+  height: 100px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  overflow: hidden;
+  background: #1e1f29;
+}
+
+.container-wrapper .count_card_overlay {
+  width: 100px;
+  height: 50px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #343650;
+  top: 0px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.container-wrapper .count_card_overlay h4 {
+  color: yellow;
+}
+
+.container-wrapper footer {
+  margin-top: 30vh;
+}
+
+.container-wrapper footer .socialMedia {
+  display: inline-block;
+}
+
+.halfCircle {
+  background: yellow;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 5px;
+  height: 10px;
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */
