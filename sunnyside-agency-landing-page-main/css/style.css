@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;900&display=swap");
 body {
   padding: 0;
@@ -100,14 +100,12 @@ a#learnMore2:hover {
   text-align: center;
   color: white;
   position: static;
-  /* top: 400px; */
   margin-top: 100px;
 }
 
 #header-wrapper nav {
   display: inline-block;
-  position: relative;
-  float: right;
+  position: absolute;
   top: 24px;
   right: 55px;
 }
@@ -318,6 +316,18 @@ a#learnMore2:hover {
   background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
 }
 
+.menu-btn {
+  visibility: hidden;
+}
+
+.menu-btn-burger {
+  visibility: hidden;
+}
+
+#triangle {
+  visibility: hidden;
+}
+
 @media only screen and (max-width: 900px) {
   .content {
     width: 100%;
@@ -341,6 +351,7 @@ a#learnMore2:hover {
   }
   #header-wrapper #header-arrow h1 {
     margin-bottom: 40px;
+    font-size: 42px;
   }
   .box3-4 h4 {
     margin-bottom: 30px;
@@ -353,7 +364,122 @@ a#learnMore2:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    position: fixed;
+  }
+  h5 {
+    margin: 50px 0 0 30px;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  #header-wrapper nav {
+    right: 0;
+    text-align: center;
+    width: auto;
+    position: absolute;
+    top: 105px;
+    right: 20px;
+    left: 20px;
+  }
+  #header-wrapper nav ul {
+    width: auto;
+    background: white;
+    margin: 10px;
+    padding: 20px 0px;
+  }
+  #header-wrapper nav ul li {
+    display: block !important;
+    padding: 20px 15px;
+  }
+  #header-wrapper nav ul li a {
+    color: #818498;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  #header-wrapper nav ul .nav-contact-href {
+    background: #fad400;
+    font-size: 14px !important;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 12px 17px;
+    margin: 10px auto 10px auto;
+    display: block;
+  }
+  .nav-content, .triangle {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s linear 300ms, opacity 300ms;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+  }
+  .nav-content.open, .triangle.open {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: visibility 0s linear 0s, opacity 300ms;
+    transition: visibility 0s linear 0s, opacity 300ms;
+  }
+  .triangle {
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom: 10px solid white;
+    border-right: 10px solid white;
+    position: absolute;
+    right: 30px;
+    top: 95px;
+  }
+  .menu-btn {
+    visibility: visible;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 30px;
+    margin: 5px;
+    right: 20px;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn-burger {
+    visibility: visible;
+    background: white;
+    border-radius: 25px;
+    width: 40px;
+    height: 3px;
+    position: relative;
+    margin: 0 auto;
+    top: 22.5px;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn-burger::before,
+  .menu-btn-burger::after {
+    content: '';
+    position: absolute;
+    border-radius: 25px;
+    width: 40px;
+    height: 3px;
+    background: white;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn-burger::before {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  .menu-btn-burger::after {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  .menu-btn.open .menu-btn-burger {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    background: transparent;
+  }
+  .menu-btn.open .menu-btn-burger::before {
+    -webkit-transform: rotate(45deg) translate(35px, -35px);
+            transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn-burger::after {
+    -webkit-transform: rotate(-45deg) translate(35px, 35px);
+            transform: rotate(-45deg) translate(35px, 35px);
   }
 }
 /*# sourceMappingURL=style.css.map */

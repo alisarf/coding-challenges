@@ -1,10 +1,11 @@
 //FONTS
 //18px
 //'Barlow' with 600 ~ sunntside,p
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&display=swap');
 //'Fraunces" with 700, 900
 //@import url('https://fonts.googleapis.com/css2?family=Fraunces&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;900&display=swap');
+
 //COLOR PALLETE
 //PRIMARY
 
@@ -30,14 +31,13 @@ body{
     height: 100%;
 }
 
-//Barlow Font
 p {
     font-family: 'Barlow';
 }
-//Fraunces Font
 h1, h3, a[title]{
     font-family: 'Fraunces';
 }
+
 h1{
     font-size: 48px;
     letter-spacing: 4px;
@@ -103,22 +103,18 @@ a#learnMore2:hover{
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
-    //padding: 50px 50px 0 50px;
     #header-arrow{
         width: auto;
         height: auto;
-        //position: relative;
         top: 200px;
         text-align: center;
         color: white;
         position: static;
-        /* top: 400px; */
         margin-top: 100px;
     }
     nav{
         display: inline-block;
-        position: relative;
-        float: right;
+        position: absolute;
         top: 24px;
         right: 55px;
         ul{
@@ -129,7 +125,6 @@ a#learnMore2:hover{
             li{
                 display: inline-block;
                 padding: 10px 15px;
-
             }
             li:last-child{
                 padding: 0;
@@ -147,9 +142,6 @@ a#learnMore2:hover{
                 font-family: 'Fraunces';
                 font-weight: 700;
             }
-
-
-
             a{
                 color:$white;
                 text-decoration: none;
@@ -174,8 +166,6 @@ a#learnMore2:hover{
     background-position: center;
     background-size: cover;
     text-align: left;
-    //min-height: 600px;
-    //min-width: 600px;
 }
 .box1-2{
     height: auto;
@@ -206,14 +196,12 @@ a#learnMore2:hover{
     display: inline-block;
     padding: 100px 0 0 0;
     #testomonial-trio{
-        //margin: 0 80px;
         display: block;
         width: 100%;
         text-align: center;
     }
     p{
         margin: 75px 0;
-        //margin: 0 100px;
     }
 }
 .testimonial{
@@ -228,7 +216,6 @@ a#learnMore2:hover{
         width: 75px;
     }
     p{
-        //width: 300px;
         font-size: 18px;
         margin: 50px 0;
     }
@@ -319,7 +306,16 @@ a#learnMore2:hover{
     background-image: url('../images/desktop/image-gallery-sugarcubes.jpg');
 }
 
-//MEDIA QUERY
+.menu-btn{
+    visibility: hidden;
+}
+.menu-btn-burger{
+    visibility: hidden;
+}
+#triangle{
+    visibility: hidden;
+}
+
 
 @media only screen and (max-width: 900px){
     .content{
@@ -343,6 +339,7 @@ a#learnMore2:hover{
         top: 0;
         h1{
             margin-bottom: 40px;
+            font-size: 42px;
         }
     }
     .box3-4 {
@@ -353,11 +350,122 @@ a#learnMore2:hover{
             width: 300px;
         }
     }
-    //construct hamburger or it will bleed on mobile view
     #header-wrapper nav ul {
-        //display: none;
         flex-direction: column;
-        position: fixed;
     }
-    //BUILD NAV HAMBURGER
+    h5{
+        margin: 50px 0 0 30px;
+        transition: all .5s ease-in-out;
+    }
+
+
+    //HAMBURGER BUILD
+
+
+    #header-wrapper nav{
+        right: 0;
+        text-align: center;
+        width: auto;
+        position: absolute;
+        top: 105px;
+        right: 20px;
+        left: 20px;
+        ul {
+            width: auto;
+            background: white;
+            margin: 10px;
+            padding: 20px 0px;
+            li{
+                display: block !important;
+                padding: 20px 15px;
+                a{
+                    color: $darkGrayishBlue;
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+            }
+            .nav-contact-href {
+                background: #fad400;
+                font-size: 14px !important;
+                width: fit-content;
+                padding: 12px 17px;
+                margin: 10px auto 10px auto;
+                display: block;
+            }
+        }
+    }
+    .nav-content, .triangle{
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s linear 300ms, opacity 300ms;
+
+    }
+    .nav-content.open, .triangle.open{
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear 0s, opacity 300ms;
+
+    }
+
+    //HAMBURGER TRIANGLE
+    .triangle{
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-bottom: 10px solid white;
+        border-right: 10px solid white;
+        position: absolute;
+        right: 30px;
+        top: 95px;
+
+    }
+    .menu-btn{
+        visibility: visible;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 30px;
+        margin: 5px;
+        right: 20px;
+        transition: all .5s ease-in-out;
+    }
+    .menu-btn-burger{
+        visibility: visible;
+        background: white;
+        border-radius: 25px;
+        width: 40px;
+        height: 3px;
+        position: relative;
+        margin: 0 auto;
+        top: 22.5px;
+        transition: all .5s ease-in-out;
+    }
+    .menu-btn-burger::before,
+    .menu-btn-burger::after{
+        content: '';
+        position: absolute;
+        border-radius: 25px;
+        width: 40px;
+        height: 3px;
+        background: white;
+        transition: all .5s ease-in-out;
+
+    }
+    .menu-btn-burger::before{
+        transform: translateY(-10px);
+    }
+    .menu-btn-burger::after{
+        transform: translateY(10px);
+    }
+    .menu-btn.open .menu-btn-burger {
+        transform: translateX(-50px);
+        background: transparent;
+        }
+    .menu-btn.open .menu-btn-burger::before{
+        transform: rotate(45deg) translate(35px, -35px)
+    }
+    .menu-btn.open .menu-btn-burger::after{
+        transform: rotate(-45deg) translate(35px, 35px)
+    }
+
 }
