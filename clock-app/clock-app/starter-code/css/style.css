@@ -66,10 +66,14 @@ body, ul, li, section, form, header, footer {
   grid-column: 1;
   color: white;
   font-family: sans-serif;
+  z-index: 20 !important;
+  position: relative;
 }
 
 #quote p {
   display: inline-block;
+  width: 350px;
+  margin-top: 0;
 }
 
 #quote cite {
@@ -80,7 +84,30 @@ body, ul, li, section, form, header, footer {
 
 #quote i {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 20px;
+  position: absolute;
+  top: 0;
+  width: 18px;
+  height: 18px;
+}
+
+#quote i:hover {
+  cursor: pointer;
+}
+
+#quote i:hover > svg path {
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  opacity: 1;
+}
+
+#quote #quote-refresh-icon-svg:hover {
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  transition: -webkit-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
+  transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 #time {
@@ -110,10 +137,6 @@ body, ul, li, section, form, header, footer {
   display: inline-block;
   position: relative;
   vertical-align: middle;
-}
-
-#time #time-content #location {
-  visibility: hidden;
 }
 
 #time p {
@@ -358,6 +381,16 @@ body, ul, li, section, form, header, footer {
   #container {
     padding: 8vh 5vw;
     height: 84vh;
+  }
+  #quote {
+    width: 100%;
+  }
+  #quote p {
+    width: 80%;
+    font-size: 14px;
+  }
+  #abbreviation {
+    font-size: 16px;
   }
   #container-bottom {
     -ms-grid-columns: auto;

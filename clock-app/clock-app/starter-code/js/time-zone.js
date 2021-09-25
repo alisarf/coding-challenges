@@ -56,7 +56,7 @@ $(document).ready(
       } else if ((timeformattedhour >= 12) && (timeformattedhour < 18 )) {
         greetings.innerHTML = "Good Afternoon";
         document.body.className = 'daytime';
-      } else if ((timeformattedhour >= 18) && (timeformattedhour < 5 )) {
+      } else if ((timeformattedhour >= 18) || (timeformattedhour < 5 )) {
         greetings.innerHTML = "Good Evening";
         document.body.className = 'nighttime';
       } else {

@@ -55,11 +55,15 @@ body,ul,li,section,form,header,footer{
     //background-color: skyblue;
     grid-row: 1;
     grid-column: 1;
-
     color: white;
     font-family: sans-serif;
+    z-index: 20 !important;
+    position: relative;
     p{
         display: inline-block;
+        width: 350px;
+        margin-top: 0;
+
     }
     cite{
         font-weight: 700;
@@ -68,7 +72,23 @@ body,ul,li,section,form,header,footer{
     }
     i{
         display: inline-block;
-        margin: 0 10px;
+        margin: 0 20px;
+        position: absolute;
+        top: 0;
+        width: 18px;
+        height: 18px;
+    }
+    i:hover{
+        cursor: pointer;
+    }
+    i:hover > svg path{
+        transition: opacity .3s;
+        opacity: 1;
+        
+    }
+    #quote-refresh-icon-svg:hover {
+        transition: transform .4s ease-in-out;
+        transform: rotate(90deg);
     }
 }
 #time{
@@ -97,7 +117,7 @@ body,ul,li,section,form,header,footer{
         }
         #location{
             //FOR NOW
-            visibility: hidden;
+            //visibility: hidden;
         }
     }
     p{
@@ -312,6 +332,16 @@ body,ul,li,section,form,header,footer{
     #container{
         padding:8vh 5vw;
         height: 84vh;
+    }
+    #quote{
+        width: 100%;
+        p{
+            width: 80%;
+            font-size: 14px;
+        }
+    }
+    #abbreviation{
+        font-size: 16px;
     }
 
     #container-bottom{
