@@ -1,7 +1,4 @@
 
-
-
-
 $(document).ready(
   $.ajax({
     async: true,

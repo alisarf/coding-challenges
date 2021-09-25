@@ -1,19 +1,4 @@
-
-
 var arrow = document.getElementById('arrow-svg');
-//capture location
-
-//capture timezone
-
-//capture time
-
-
-
-
-
-
-
-
 
 //click on arrow icon reveal lower section
 arrow.addEventListener('click', function() {
@@ -35,8 +20,6 @@ arrow.addEventListener('click', function() {
     };
     
 }, false);
-
-
 
 //Hover over the arrow Icon
 
