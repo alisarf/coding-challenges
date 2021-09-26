@@ -1,3 +1,4 @@
+var paragraph, author;
 
 //capture the elements
 paragraph = document.getElementById('quote-refresh-paragraph');

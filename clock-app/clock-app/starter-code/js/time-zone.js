@@ -1,4 +1,3 @@
-
 $(document).ready(
   $.ajax({
     async: true,
@@ -6,22 +5,18 @@ $(document).ready(
       beforeSend: function() { $('#loadscreen').show(); },
       complete: function() { $('#loadscreen').fadeOut(800); },
       success: function(result) {
-      console.log(result.day_of_week)
-      console.log(result.day_of_year)
-      console.log(result.timezone)
-      console.log(result.abbreviation)
-      console.log(result.datetime);
-      //$("#tm").text(result.datetime);
       
+      //Declare variables  
+      var timeformatted, timeformattedsliced, timeformattedhour;
+      var currentTimeDiv, dayOfYearStringDiv, dayOfWeekStringDiv, incrementforzero;
+      var weekOfYearStringDiv, abbreviationTZ, timeofday;
+
       //time of day
       timeformatted = result.datetime.slice(11, 16);
       timeformattedsliced = result.datetime.slice(11, 13);
       timeformattedhour = Number(timeformattedsliced);
 
-
-
       currentTimeDiv = document.getElementById('current-timezone');
-      //newCurrentTimeDiv = currentTimeDiv.replace(/_/g, ' ');
       currentTimeDiv.innerHTML = result.timezone;
 
       dayOfYearStringDiv = document.getElementById('day-of-year');
@@ -41,11 +36,10 @@ $(document).ready(
       timeofday = document.getElementById('timeofday');
       timeofday.innerHTML = timeformatted;
 
-
       console.log(timeformattedhour)
       
       //set day and night
-      greetings = document.getElementById('greetings');
+      var greetings = document.getElementById('greetings');
       
       if((timeformattedhour >= 5) && (timeformattedhour < 12 )) {
         greetings.innerHTML = "Good Morning";

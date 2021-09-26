@@ -4,12 +4,12 @@ var arrow = document.getElementById('arrow-svg');
 arrow.addEventListener('click', function() {
     //toggle in classes from transform rotate
     document.getElementById('arrow-svg').classList.toggle('rotate');
-    bottomclassList = document.getElementById('container-bottom').classList
+    var bottomclassList = document.getElementById('container-bottom').classList
     document.getElementById('container-bottom').classList.toggle('less-visibility-lower');
     document.getElementById('container').classList.toggle('less-visibility-upper');
     console.log(bottomclassList)
 
-    toggleWords = document.getElementById('toggle-words');
+    var toggleWords = document.getElementById('toggle-words');
     //ui shows more now
     if(toggleWords.innerHTML === "less") {
         toggleWords.innerHTML = "more";
