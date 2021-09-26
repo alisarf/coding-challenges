@@ -8,25 +8,71 @@
     <title>Document</title>
 </head>
 <body>
+    <nav class="navigation">
+        <h1>The Planets</h1>
+        <ul id="planet-navigation">
+            <li id="Mercury">Mercury</li>
+            <li id="Venus">Venus</li>
+            <li id="Earth">Earth</li>
+            <li id="Mars">Mars</li>
+            <li id="Jupiter">Jupiter</li>
+            <li id="Saturn">Saturn</li>
+            <li id="Uranus">Uranus</li>
+            <li id="Neptune">Neptune</li>
+        </ul>
+    </nav>
     <div class="grid-wrapper">
-        <nav class="grid-item1">
-            <h1>The Planets</h1>
-            <ul><li>Saturn</li></ul>
-        </nav>
-        <div class="grid-item2">Overview</div>
-        <div class="grid-item2">Structure</div>
-        <div class="grid-item2">Surface</div>
-        <img class="grid-item3 image" src="starter-code/assets/planet-jupiter.svg" alt="">
-        <div class="grid-item3">        
-            <h2>Planet Name</h2>
-            <p>Text Here</p>
-            <p>Source</p>
-        </div>
-        <div class="grid-item4">hours</div>
-        <div class="grid-item4">years</div>
-        <div class="grid-item4">radius</div>
-        <div class="grid-item4">distance</div>
 
+        <section class="planet-wrapper">
+            <img id="planet-image" src="starter-code/assets/planet-earth.svg" alt="">
+            <div id="planet-details">
+                <div class="planet-details">        
+                    <h2 id="planet-name">Earth</h2>
+                    <p id="planet-content">Third planet from the Sun and the only known planet to harbor life. About 29.2% of Earth's surface is land with remaining 70.8% is covered with water. Earth's distance from the Sun, physical properties and geological history have allowed life to evolve and thrive.
+                    </p>
+                    <p id="planet-source-wrapper" >Source: 
+                        <a id="planet-source" href="https://en.wikipedia.org/wiki/Earth">Wikipedia</a>
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><path fill="#FFF" d="M11.34.66C10.9.22 10.37 0 9.75 0h-7.5C1.63 0 1.1.22.66.66.22 1.1 0 1.63 0 2.25v7.5c0 .62.22 1.15.66 1.59.44.44.97.66 1.59.66h7.5c.62 0 1.15-.22 1.59-.66.44-.44.66-.97.66-1.59v-7.5c0-.62-.22-1.15-.66-1.59zM10 6.25a.467.467 0 01-.305.46.544.544 0 01-.195.04.465.465 0 01-.352-.149L8.023 5.476 3.852 9.648a.481.481 0 01-.352.149.48.48 0 01-.352-.149l-.796-.797a.48.48 0 01-.149-.351.48.48 0 01.149-.352l4.172-4.172-1.125-1.125c-.162-.15-.198-.333-.11-.546A.467.467 0 015.75 2H9.5c.135 0 .253.05.352.148A.48.48 0 0110 2.5v3.75z" opacity=".5"/></svg>
+                        </i>
+                    </p>
+                </div>
+                <section id="planet-description-wrapper">
+                    <div class="planet-description active" id="overview-btn">
+                        <span>01 </span>
+                        <p class="p" id="overview">overview</p>
+                    </div>
+                    <div class="planet-description" id="structure-btn">
+                        <span>02 </span>
+                        <p class="p" id="structure">structure</p>
+                    </div>
+                    <div class="planet-description" id="surface-btn">
+                        <span>03 </span>
+                        <p class="p">surface</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section id="planet-facts-wrapper">
+            <div class="planet-facts">
+                <h5>rotation</h5>
+                <p id="rotation">0.99 Days</p>
+            </div>
+            <div class="planet-facts">
+                <h5>revolution</h5>
+                <p id="revolution">365.26 Days</p>
+            </div>
+            <div class="planet-facts">
+                <h5>radius</h5>
+                <p id="radius">6,371 KM</p>
+            </div>
+            <div class="planet-facts">
+                <h5>temperature</h5>
+                <p id="temperature">16°c</p>
+            </div>
+        </section>
     </div>
+<script src="starter-code/js/planet-info-call.js"></script>
 </body>
 </html>
