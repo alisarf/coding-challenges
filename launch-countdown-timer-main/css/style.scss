@@ -191,12 +191,14 @@ svg path:hover{
     }
     footer{
         background-size: 175% 100%;
-        background-position: -75px 0;
+        background-position: 0 0;
         height: 25vh;
+        bottom: 0;
+        position: absolute;
         ul{
         margin-top: auto;
-        bottom: 0vh;
-        margin-bottom: 40px;
+        bottom: 2vh;
+        //margin-bottom: 40px;
         }
     }
 

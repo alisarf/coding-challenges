@@ -15,5 +15,5 @@ menuBtn.addEventListener('click', () => {
         triangle.classList.remove('open');
         menuOpen = false;
     }
-}, true);
+});
 

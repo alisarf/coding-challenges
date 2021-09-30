@@ -10,7 +10,7 @@ let seconds  = document.querySelectorAll(".seconds");
 
 function getDays(event){
     var newDate = new Date;
-    const eventDate = new Date('2021-09-04T16:30:45');
+    const eventDate = new Date('2021-09-15T16:30:45');
     //TESTING DATE
     //const newDate = new Date('2021-09-01T14:10:00')
 

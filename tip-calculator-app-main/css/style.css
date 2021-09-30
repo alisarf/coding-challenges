@@ -38,6 +38,8 @@ h6 {
   width: 850px;
   padding: 40px;
   border-radius: 20px;
+  -webkit-box-shadow: 13px 13px 30px 0.03px #7f9c9f;
+          box-shadow: 13px 13px 30px 0.03px #7f9c9f;
 }
 
 .bumper {
