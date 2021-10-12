@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+$peach: #E7816B;
+$lightPeach: #FFAD9B;
+$black: #1D1C1E;
+$darkGrey : #333136;
+$white: white;
+$lightGrey: #F1F3F5;
+
+//font-family: 'Jost', sans-serif;
+
+//RESET
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+ul{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    li{
+        display: inline;
+        a{
+            text-decoration: none;
+        }
+    }
+}
+body{
+    font-family: 'Jost', sans-serif;
+    main{
+        padding: 0 10vw 150px 10vw;
+    }
+    nav {
+        padding: 50px 10vw;
+    }
+    article{
+        margin: 0 0 155px 0;
+        border-radius: 10px;
+    }
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    .logoSection{
+        //width: 120px;
+    }
+    div{
+        display: inline-block;
+    }
+
+    li{
+        margin: 21px;
+    }
+    a{
+        color: $black;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+
+}
+    .logoDesign{
+        background: conic-gradient(from 90deg at 50% 50%, rgba(231, 129, 107, 0.0001) 0deg, #E7816B 359.74deg, rgba(231, 129, 107, 0.0001) 360deg);
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;
+        margin-right: 18px;
+    }
+.award-header{
+    background-color: $peach;
+    display: flex;
+    justify-content: space-evenly;
+    //height: 800px;
+    min-width: 1318px;
+    height: 640px;
+    color: white;
+    font-family: 'Jost';
+    h2{
+        font-weight: 500;
+        font-size: 48px;
+        font-family: 'Jost';
+        line-height: 48px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 26px;
+        margin-top: 25px;
+    }
+    div{
+        width: 50%;
+    }
+    .award-header-content{
+        margin: 150px 0px 140px 95px;
+        width: 540px;
+        height: 350px;
+        position: relative;
+        button{
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    img{
+
+    }
+    #cellphone{
+        background-image: url("/designo-multi-page-website/starter-code/assets/home/desktop/image-hero-phone.png");
+        //height: 279px;
+        //width: 573px;
+        background-size: cover;
+        z-index: 2;
+    }
+    #circle{
+        background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+        opacity: 0.3;
+        width: 640px;
+        height:640px;
+        border-radius: 640px;
+        position: absolute;
+        right: 200px;
+    }
+}
+.circle{
+    background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+    opacity: 0.3;
+    width: 292px;
+    height: 292px;
+}
+//roundbutton
+.rdBtn{
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Jost';
+    padding: 15px 25px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background-color: $lightGrey;
+    border: none;
+    cursor: pointer;
+    transition: background-color .5s, color .5s;
+}
+.rdBtn:hover{
+    background-color: $lightPeach;
+    color: white;
+}
+
+#tridesign{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    height: 600px;
+    gap: 10px;
+    text-transform: uppercase;
+    section{
+        background-color: #979797;
+        border-radius: 10px;
+        color: white;
+        //align in center
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        div{
+            margin: auto auto;
+        }
+    }
+    section:hover{
+        background-color: $lightPeach;
+        transition: background-color 0.5s;
+        cursor: pointer;
+        span{
+            color: $peach;
+        }
+    }
+    h3{
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    button{
+        border: none;
+        background-color: transparent;
+        font-size: 15px;
+        color: white;
+        letter-spacing: 5px;
+        cursor: pointer;
+        span{
+            color: $lightPeach;
+        }
+    }
+    #webdesign{
+        grid-column: 1;
+        grid-row: 1/3;
+    }
+    #appdesign{
+        grid-column: 2;
+        grid-row: 1/2;
+    }
+    #graphicdesign{
+        grid-column: 2;
+        grid-row: 2/3;
+    }
+}
+#threeteirs{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    section{
+        width: 350px;
+        height: 412px;
+        position: relative;
+        h4{
+            width: 100%;
+            font-size: 20px;
+            margin: 48px 0 32px 0;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        p{
+            width: 100%;
+            font-size: 16px;
+        }
+        img{
+            margin: 0 auto;
+           // z-index: 50;
+        }
+        .circleIcon {
+            background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+            width: 202px;
+            height: 202px;
+            z-index: -2;
+            position: absolute;
+            opacity: 0.2;
+            border-radius: 202px;
+            left: 70px;
+        }
+    }
+}
+.letstalk{
+    background-color: $peach;
+    border-radius: 10px;
+    color: white;
+    //padding: 50px 70px;
+    display: flex;
+    justify-content: space-between;
+    height: 292px;
+    #letstalk-content{
+        margin: 72px 0px 46px 95px;
+        height: 174px;
+        width: 459px;
+    }
+    h5{
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 40px;
+        margin: 0 0 20px 0;
+    }
+    p{
+        font-size: 16px;
+        line-height: 26px;
+    }
+    button{
+        margin: 118px 96px 118px 0;
+        z-index: 2;
+    }
+    .circleduo{
+        position: absolute;
+        right: 0;
+        
+    }
+    #border-overlap{
+        border-radius: 0 20px 292px 292px !important;
+    }
+    .circletrio{
+        position: absolute;
+        bottom: -153px;
+        right: 0;
+        
+    }
+    .half-circle{
+        //border-radius: 292px;
+        border-radius: 0 0 292px 292px;
+        display: inline-block;
+        height: 146px;
+    }
+    .full-circle{
+        border-radius: 292px;
+        height: 292px;
+    }
+    .multicircle{
+        display: inline-block;
+        background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+        opacity: 0.3;
+        width: 292px;
+    }
+}
+footer{
+    background-color: black;
+    //overlap
+    //margin-top: -50px;
+    height: 393px; //add the top margin
+    color: white;
+    a{
+        color: white;
+    }
+    article{
+        margin: 0 10vw;
+        top: -220px;
+        position: relative;
+    }
+    #footer-content{
+        margin: 0 164px;
+        padding-bottom: 72px;
+
+    }
+    ul{
+        display: inline-block;
+    }
+    #footer-content{
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto;
+        top: -220px;
+        position: relative;
+        .logoSection{
+            grid-column: 1/4;
+            grid-row: 1;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 72px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid $darkGrey;
+            li{
+                margin: 21px;
+            }
+            a{
+                color: $white;
+                letter-spacing: 2px;
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+            a:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            div{
+                display: inline-block;
+            }
+            svg path{
+                fill: white;
+            }
+        }
+        .footer-content-sections{
+            color: $darkGrey;
+            font-size: 16px;
+            margin-top: 32px;
+            h6{
+                font-weight: 600;
+                font-size: 16px;
+                margin: 0;
+            }
+            p{
+                font-size: 16px;
+            }
+
+        }
+        .contact-info p{
+            font-weight: 600;
+        }
+        #social-media{
+            position: relative;
+            ul{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                a{
+                    margin: 0 8px;
+                }
+                a:hover > svg path{
+                    fill: $lightPeach;
+                }
+            }
+
+        }
+    }
+}
+#background-img{
+    background: #F1F3F5;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    border-radius: 297px 297px 297px 0px;
+    position: absolute;
+    height: 594px;
+    width: 1006px;
+    z-index: -10;
+    bottom: -1400px;
+    right: 0;
+    transform: rotate(-180deg);
+}

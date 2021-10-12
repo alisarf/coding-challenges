@@ -1,0 +1,562 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: inline;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+}
+
+body main {
+  padding: 0 10vw 150px 10vw;
+}
+
+body nav {
+  padding: 50px 10vw;
+}
+
+body article {
+  margin: 0 0 155px 0;
+  border-radius: 10px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: uppercase;
+}
+
+nav div {
+  display: inline-block;
+}
+
+nav li {
+  margin: 21px;
+}
+
+nav a {
+  color: #1D1C1E;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.logoDesign {
+  background: conic-gradient(from 90deg at 50% 50%, rgba(231, 129, 107, 0.0001) 0deg, #E7816B 359.74deg, rgba(231, 129, 107, 0.0001) 360deg);
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  margin-right: 18px;
+}
+
+.award-header {
+  background-color: #E7816B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  min-width: 1318px;
+  height: 640px;
+  color: white;
+  font-family: 'Jost';
+}
+
+.award-header h2 {
+  font-weight: 500;
+  font-size: 48px;
+  font-family: 'Jost';
+  line-height: 48px;
+}
+
+.award-header p {
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 25px;
+}
+
+.award-header div {
+  width: 50%;
+}
+
+.award-header .award-header-content {
+  margin: 150px 0px 140px 95px;
+  width: 540px;
+  height: 350px;
+  position: relative;
+}
+
+.award-header .award-header-content button {
+  position: absolute;
+  bottom: 0;
+}
+
+.award-header #cellphone {
+  background-image: url("/designo-multi-page-website/starter-code/assets/home/desktop/image-hero-phone.png");
+  background-size: cover;
+  z-index: 2;
+}
+
+.award-header #circle {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(93, 2, 2, 0.0001)), to(rgba(93, 2, 2, 0.497569)));
+  background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+  opacity: 0.3;
+  width: 640px;
+  height: 640px;
+  border-radius: 640px;
+  position: absolute;
+  right: 200px;
+}
+
+.circle {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(93, 2, 2, 0.0001)), to(rgba(93, 2, 2, 0.497569)));
+  background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+  opacity: 0.3;
+  width: 292px;
+  height: 292px;
+}
+
+.rdBtn {
+  font-weight: 500;
+  font-size: 15px;
+  font-family: 'Jost';
+  padding: 15px 25px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: #F1F3F5;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color .5s, color .5s;
+  transition: background-color .5s, color .5s;
+}
+
+.rdBtn:hover {
+  background-color: #FFAD9B;
+  color: white;
+}
+
+#tridesign {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  height: 600px;
+  gap: 10px;
+  text-transform: uppercase;
+}
+
+#tridesign section {
+  background-color: #979797;
+  border-radius: 10px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#tridesign section div {
+  margin: auto auto;
+}
+
+#tridesign section:hover {
+  background-color: #FFAD9B;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+
+#tridesign section:hover span {
+  color: #E7816B;
+}
+
+#tridesign h3 {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+#tridesign button {
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  color: white;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+
+#tridesign button span {
+  color: #FFAD9B;
+}
+
+#tridesign #webdesign {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+#tridesign #appdesign {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+#tridesign #graphicdesign {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+#threeteirs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+#threeteirs section {
+  width: 350px;
+  height: 412px;
+  position: relative;
+}
+
+#threeteirs section h4 {
+  width: 100%;
+  font-size: 20px;
+  margin: 48px 0 32px 0;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#threeteirs section p {
+  width: 100%;
+  font-size: 16px;
+}
+
+#threeteirs section img {
+  margin: 0 auto;
+}
+
+#threeteirs section .circleIcon {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(93, 2, 2, 0.0001)), to(rgba(93, 2, 2, 0.497569)));
+  background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+  width: 202px;
+  height: 202px;
+  z-index: -2;
+  position: absolute;
+  opacity: 0.2;
+  border-radius: 202px;
+  left: 70px;
+}
+
+.letstalk {
+  background-color: #E7816B;
+  border-radius: 10px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 292px;
+}
+
+.letstalk #letstalk-content {
+  margin: 72px 0px 46px 95px;
+  height: 174px;
+  width: 459px;
+}
+
+.letstalk h5 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 40px;
+  margin: 0 0 20px 0;
+}
+
+.letstalk p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.letstalk button {
+  margin: 118px 96px 118px 0;
+  z-index: 2;
+}
+
+.letstalk .circleduo {
+  position: absolute;
+  right: 0;
+}
+
+.letstalk #border-overlap {
+  border-radius: 0 20px 292px 292px !important;
+}
+
+.letstalk .circletrio {
+  position: absolute;
+  bottom: -153px;
+  right: 0;
+}
+
+.letstalk .half-circle {
+  border-radius: 0 0 292px 292px;
+  display: inline-block;
+  height: 146px;
+}
+
+.letstalk .full-circle {
+  border-radius: 292px;
+  height: 292px;
+}
+
+.letstalk .multicircle {
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(93, 2, 2, 0.0001)), to(rgba(93, 2, 2, 0.497569)));
+  background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+  opacity: 0.3;
+  width: 292px;
+}
+
+footer {
+  background-color: black;
+  height: 393px;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+footer article {
+  margin: 0 10vw;
+  top: -220px;
+  position: relative;
+}
+
+footer #footer-content {
+  margin: 0 164px;
+  padding-bottom: 72px;
+}
+
+footer ul {
+  display: inline-block;
+}
+
+footer #footer-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  top: -220px;
+  position: relative;
+}
+
+footer #footer-content .logoSection {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 72px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #333136;
+}
+
+footer #footer-content .logoSection li {
+  margin: 21px;
+}
+
+footer #footer-content .logoSection a {
+  color: white;
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+footer #footer-content .logoSection a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+footer #footer-content .logoSection div {
+  display: inline-block;
+}
+
+footer #footer-content .logoSection svg path {
+  fill: white;
+}
+
+footer #footer-content .footer-content-sections {
+  color: #333136;
+  font-size: 16px;
+  margin-top: 32px;
+}
+
+footer #footer-content .footer-content-sections h6 {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+}
+
+footer #footer-content .footer-content-sections p {
+  font-size: 16px;
+}
+
+footer #footer-content .contact-info p {
+  font-weight: 600;
+}
+
+footer #footer-content #social-media {
+  position: relative;
+}
+
+footer #footer-content #social-media ul {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+footer #footer-content #social-media ul a {
+  margin: 0 8px;
+}
+
+footer #footer-content #social-media ul a:hover > svg path {
+  fill: #FFAD9B;
+}
+
+#background-img {
+  background: #F1F3F5;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  border-radius: 297px 297px 297px 0px;
+  position: absolute;
+  height: 594px;
+  width: 1006px;
+  z-index: -10;
+  bottom: -1400px;
+  right: 0;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+/*# sourceMappingURL=style.css.map */
