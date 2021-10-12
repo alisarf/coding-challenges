@@ -7,6 +7,7 @@ $black: #1D1C1E;
 $darkGrey : #333136;
 $white: white;
 $lightGrey: #F1F3F5;
+$lightestPeach: #FDF3F0;
 
 //font-family: 'Jost', sans-serif;
 
@@ -101,6 +102,7 @@ ul{
 }
 body{
     font-family: 'Jost', sans-serif;
+    height: 100%;
     main{
         padding: 0 10vw 150px 10vw;
     }
@@ -117,8 +119,11 @@ nav{
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
-    .logoSection{
-        //width: 120px;
+    a.logoSection, a.logoSection:hover{
+        text-decoration: none;
+    }
+    .logoSection:hover{
+        cursor: pointer;
     }
     div{
         display: inline-block;
@@ -147,10 +152,13 @@ nav{
     display: flex;
     justify-content: space-evenly;
     //height: 800px;
-    min-width: 1318px;
+    //min-width: 1318px;
     height: 640px;
     color: white;
     font-family: 'Jost';
+    width: 1110px;
+    margin: 0px auto 160px auto;
+    position: relative;
     h2{
         font-weight: 500;
         font-size: 48px;
@@ -192,7 +200,7 @@ nav{
         height:640px;
         border-radius: 640px;
         position: absolute;
-        right: 200px;
+        right:0px;
     }
 }
 .circle{
@@ -213,10 +221,14 @@ nav{
     border: none;
     cursor: pointer;
     transition: background-color .5s, color .5s;
+    
 }
 .rdBtn:hover{
     background-color: $lightPeach;
     color: white;
+}
+.letstalklink{
+    z-index: 20;
 }
 
 #tridesign{
@@ -226,7 +238,9 @@ nav{
     height: 600px;
     gap: 10px;
     text-transform: uppercase;
-    section{
+    width: 1110px;
+    margin: 160px auto;
+    a{
         background-color: #979797;
         border-radius: 10px;
         color: white;
@@ -235,12 +249,40 @@ nav{
         justify-content: center;
         align-items: center;
         text-align: center;
+        position: relative;
+        text-decoration: none;
         div{
             margin: auto auto;
+
         }
+        div:nth-child(2){
+            z-index: 2;
+        }
+
+        .tridesign-hover-state:hover{
+            background-color: $peach;
+            transition: background-color .5s;
+        }
+        .tridesign-hover-state{
+            width: 100%;
+            height: 100%;
+            opacity: .6;
+            position: absolute;
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+        }
+        .tridesign-content-lrg{
+            height: 640px;
+            padding-top: 273px;
+        }
+        .tridesign-content-sml{
+            height: 295px;
+            padding-top: 107px;
+        }
+
     }
-    section:hover{
-        background-color: $lightPeach;
+    a:hover{
         transition: background-color 0.5s;
         cursor: pointer;
         span{
@@ -266,20 +308,141 @@ nav{
     #webdesign{
         grid-column: 1;
         grid-row: 1/3;
+        background-image: url("/designo-multi-page-website/starter-code/assets/home/desktop/image-web-design-large.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        
     }
+
     #appdesign{
         grid-column: 2;
         grid-row: 1/2;
+        background-image: url("/designo-multi-page-website/starter-code/assets/home/desktop/image-app-design.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+
+        
     }
     #graphicdesign{
         grid-column: 2;
         grid-row: 2/3;
+        background-image: url("/designo-multi-page-website/starter-code/assets/home/desktop/image-graphic-design.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        
     }
 }
+#duodesign{
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: auto;
+    //height: 600px;
+    gap: 10px;
+    text-transform: uppercase;
+    width: 1110px;
+    margin: 160px auto;
+    a{
+        background-color: #979797;
+        border-radius: 10px;
+        color: white;
+        //align in center
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        text-decoration: none;
+        div{
+            margin: auto auto;
+
+        }
+        div:nth-child(2){
+            z-index: 2;
+        }
+
+        .tridesign-hover-state:hover{
+            background-color: $peach;
+            transition: background-color .5s;
+        }
+        .tridesign-hover-state{
+            width: 100%;
+            height: 100%;
+            opacity: .6;
+            position: absolute;
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+        }
+        .tridesign-content-sml{
+            height: 295px;
+            padding-top: 107px;
+        }
+
+    }
+    a:hover{
+        transition: background-color 0.5s;
+        cursor: pointer;
+        span{
+            color: $peach;
+        }
+    }
+    h3{
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    button{
+        border: none;
+        background-color: transparent;
+        font-size: 15px;
+        color: white;
+        letter-spacing: 5px;
+        cursor: pointer;
+        span{
+            color: $lightPeach;
+        }
+    }
+    #webdesign{
+        grid-row: 1/2;
+        background-image: url("/designo-multi-page-website/starter-code/assets/home/desktop/image-web-design-small.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }
+    #appdesign{
+        grid-column: 1;
+        grid-row: 1/2;
+        background-image: url("/designo-multi-page-website/starter-code/assets/home/desktop/image-app-design.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }
+    #graphicdesign{
+        grid-column: 2;
+        grid-row: 1/2;
+        background-image: url("/designo-multi-page-website/starter-code/assets/home/desktop/image-graphic-design.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        
+    }
+}
+
+
+
+
+
+
+
+
+
 #threeteirs{
     display: flex;
     justify-content: space-between;
     text-align: center;
+    width: 1110px;
+    margin: 160px auto;
     section{
         width: 350px;
         height: 412px;
@@ -298,6 +461,28 @@ nav{
         img{
             margin: 0 auto;
            // z-index: 50;
+        }
+        .rdBtn{
+            background-color: $peach;
+            color: white;
+        }
+        .rdBtn:hover{
+            background-color: $lightPeach;
+        }
+        .country{
+            margin: 0 auto;
+            width: 202px;
+            height: 202px;
+        }
+        #canada{
+            background-image: url('../starter-code/assets/about/desktop/canada.svg');
+            
+        }
+        #australia{
+            background-image: url('../starter-code/assets/about/desktop/australia.svg');
+        }
+        #unitedKingdom{
+            background-image: url('../starter-code/assets/about/desktop/unitedKingdom.svg');
         }
         .circleIcon {
             background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
@@ -319,11 +504,26 @@ nav{
     display: flex;
     justify-content: space-between;
     height: 292px;
+    width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    //footer text
     #letstalk-content{
         margin: 72px 0px 46px 95px;
         height: 174px;
         width: 459px;
+        z-index: 2;
+        
     }
+    //webdesign text
+    .center-text{
+        margin: 72px auto 95px;
+        text-align: center;
+        width: 100%;
+        z-index: 22;
+    }
+
     h5{
         font-weight: 500;
         font-size: 40px;
@@ -344,11 +544,11 @@ nav{
         
     }
     #border-overlap{
-        border-radius: 0 20px 292px 292px !important;
+        border-radius: 20px 0 292px 292px !important
     }
     .circletrio{
         position: absolute;
-        bottom: -153px;
+        bottom: -8px;
         right: 0;
         
     }
@@ -357,10 +557,12 @@ nav{
         border-radius: 0 0 292px 292px;
         display: inline-block;
         height: 146px;
+        transform: scaleX(-1);
     }
     .full-circle{
-        border-radius: 292px;
-        height: 292px;
+        border-radius: 0 0 292px 292px;
+        height: 146px;
+        transform: rotate(180deg);
     }
     .multicircle{
         display: inline-block;
@@ -369,6 +571,7 @@ nav{
         width: 292px;
     }
 }
+
 footer{
     background-color: black;
     //overlap
@@ -459,7 +662,11 @@ footer{
         }
     }
 }
-#background-img{
+//grey background decal
+
+
+
+.background-img{
     background: #F1F3F5;
     mix-blend-mode: normal;
     opacity: 0.5;
@@ -468,7 +675,266 @@ footer{
     height: 594px;
     width: 1006px;
     z-index: -10;
-    bottom: -1400px;
     right: 0;
     transform: rotate(-180deg);
+}
+.background-img.graphic-design-bg{
+    bottom: -800px !important;
+}
+.background-img.home-design-bg{
+    bottom: -1400px;;
+}
+.background-img#about-design-bg-below{
+    top:1750px;
+    right: -450px !important;
+}
+.background-img#about-design-bg-upper{
+    //bottom:-1100px;
+    transform: rotate(0deg);
+    left: 0;
+    top: 500px;
+}
+.upper-left{
+    transform: rotate(0deg);
+    left: 0;
+    top: 250px;
+}
+#home-bg-img{
+    top: 400px !important;
+}
+#contact-design-bg{
+    top: 850px;
+    transform: rotate(360deg);
+}
+
+
+
+
+
+p{
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'jost';
+}
+h2{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 2px;
+}
+//WEBDESIGN
+
+#webdesign-cards-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    width: 1110px;
+    margin: 160px auto;
+    section{
+        height: 478px;
+        width: 350px;
+        
+        img{
+            height: 320px;
+            width: 350px;
+            border-radius: 15px 15px 0 0;
+        }
+        div{
+            background-color: $lightPeach;
+            cursor: pointer;
+            border-radius: 0px 0px 15px 15px;
+            padding: 32px;
+            text-align: center;
+            h2{
+            color: $peach;
+            font-weight: 400;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-size: 20px;
+            line-height: 26px;
+            }
+        }
+        div:hover{
+            background-color: $peach;
+            h2, p{
+                color: $white;
+                transition: background-color .5s, color .3s ;
+            }
+        }
+    }
+}
+
+//ABOUT US
+.about-us-header{
+    width: 1110px;
+    height: 480px;
+    display: flex;
+    margin: 0 auto 160px;
+    border-radius: 15px;
+    background-color: $peach;
+    color: $white;
+    //justify-content: center;
+    div:nth-child(1){
+        width:634px ;
+        margin: 135px 95px;
+        h2{
+            margin-bottom: 32px;
+        }
+    }
+    div:nth-child(2){
+        border-radius: 0 15px 15px 0;
+    }
+
+    #about-us-img{
+        background-image: url("../starter-code/assets/about/desktop/image-about-hero.jpg");
+        width: 476px;
+    }
+}
+
+.about-us-card{
+    width: 1110px;
+    height: 640px;
+    margin: 160px auto;
+    display: flex;
+    border-radius: 15px;
+    background-color: $lightestPeach;
+    //div:nth-child(1){
+     //   width: 634px;
+    //}
+
+    .about-us-content{
+        width: 634px;
+        margin: 154px 96px;
+        h2{
+            color: #E7816B;
+            margin-bottom: 24px;
+        }
+    }
+    #about-us-worldclass{
+        background-image: url("../starter-code/assets/about/desktop/image-world-class-talent.jpg");
+        width: 476px;
+        border-radius: 15px 0 0 15px;
+    }
+    #about-us-realdeal{
+        background-image: url("../starter-code/assets/about/desktop/image-real-deal.jpg");
+        width: 476px;
+        border-radius: 0 15px 15px 0;
+    }
+}
+
+//CONTACT
+.location-card-img{
+    width: 350px;
+    height: 326px;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#location-canada{
+    background-image: url('../starter-code/assets/locations/desktop/image-map-canada.png');
+}
+#location-australia{
+    background-image: url('../starter-code/assets/locations/desktop/image-map-australia.png');
+}
+#location-UK{
+    background-image: url('../starter-code/assets/locations/desktop/image-map-united-kingdom.png');
+}
+.location-card-content{
+    width: 730px;
+    border-radius: 15px;
+    background-color: $lightestPeach;
+    padding: 88px 95px;
+    position: relative;
+    h2{
+        color: $peach;
+        display: block;
+        margin-bottom: 24px;
+    }
+    p{
+        width: 255px;
+        height: 78px;
+    }
+    p::first-line{
+        font-weight: 500;
+    }
+    .location-info{
+        display: flex;
+        justify-content: space-between;
+    }
+    .true-full-circle:nth-child(1){
+        
+    }
+    .true-full-circle:nth-child(2){
+        transform: rotate(90deg);
+    }
+}
+.location-card{
+    display: flex;
+    justify-content: space-between;
+    width: 1110px;
+    height: 326px;
+    margin: 0 auto 30px auto;
+}
+.location-card:nth-child(3){
+    margin-bottom: 160px;
+}
+.true-full-circle{
+    //position: absolute;
+    border-radius:292px;
+    height: 292px;
+    width: 292px;
+    background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+    opacity: 0.06;
+    display: inline-block;
+    //transform: rotate(180deg);
+}
+
+.circle-container {
+    width: 600px;
+    height: 292px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+} 
+
+//CONTACT FORM
+#contact-form{
+    width: 380px;
+    height: 371px;
+    margin: 54px 96px 54px 0;
+    input{
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: white;
+    border-bottom: 1px solid white;
+    margin-bottom: 25px;
+    padding-left: 16px;
+    cursor: pointer;
+    }
+    input::placeholder{
+        color: white;
+        opacity: 0.5;
+    }
+    input:not(:last-child){
+        height: 38px;
+        padding-bottom: 11px;
+    }
+    input:last-child{
+        height: 102px;
+        padding-bottom: 70px;
+    }
+    input:focus{
+        border: none;
+        outline: none;
+        border-bottom: 2px solid white ;
+        ::placeholder{
+            color: white;
+            opacity: 1;
+            font-weight: 500;
+        }
+    }
+    
 }
